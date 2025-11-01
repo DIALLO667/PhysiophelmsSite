@@ -1,0 +1,17 @@
+{
+  "name": "physio-phelms-website",
+  "version": "1.0.0",
+  "description": "Physio Phelms - Professional physiotherapy center website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve . -p 8000",
+    "start": "npx serve . -p 8000",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "keywords": ["physiotherapy", "healthcare", "website"],
+  "author": "Physio Phelms",
+  "license": "MIT"
+}

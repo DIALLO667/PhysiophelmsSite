@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Physio Phelms</title>
+    <meta name="description" content="Découvrez nos services de physiothérapie : générale, gériatrique, pédiatrique, neurologique, sportive et plus.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpeg" href="public/imgi_1_497090745_18066544382293413_4831932850810085523_n.jpg">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="public/imgi_1_497090745_18066544382293413_4831932850810085523_n.jpg" alt="Physio Phelms Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h1>Physio Phelms</h1>
+                        <p>Un coup de main vers une santé optimale</p>
+                    </div>
+                </div>
+                
+                <nav class="nav desktop-nav">
+                    <a href="accueil.html">Accueil</a>
+                    <a href="services.html" class="active">Services</a>
+                    <a href="apropos.html">À propos</a>
+                    <a href="rendez-vous.html">Rendez-vous</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="rendez-vous.html" class="btn-primary">Prendre RDV</a>
+                </nav>
+                
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            
+            <nav class="mobile-nav" id="mobileNav">
+                <a href="accueil.html" onclick="closeMobileMenu()">Accueil</a>
+                <a href="services.html" onclick="closeMobileMenu()">Services</a>
+                <a href="apropos.html" onclick="closeMobileMenu()">À propos</a>
+                <a href="rendez-vous.html" onclick="closeMobileMenu()">Rendez-vous</a>
+                <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
+                <a href="rendez-vous.html" class="btn-primary" onclick="closeMobileMenu()">Prendre RDV</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Nos <span class="gradient-text">Services</span></h1>
+            <p>Une gamme complète de services de physiothérapie pour répondre à tous vos besoins de santé et de bien-être.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="public/imgi_11_482230671_18059299208293413_3543913593041663820_n.jpg" alt="Physiothérapie générale">
+                    <div class="service-content">
+                        <div class="service-icon">🏥</div>
+                        <h3>Physiothérapie générale</h3>
+                        <p>Traitement complet pour troubles musculo-squelettiques et rééducation fonctionnelle. Nous traitons les douleurs dorsales, cervicales, articulaires et musculaires.</p>
+                        <ul class="service-details">
+                            <li>• Rééducation post-traumatique</li>
+                            <li>• Traitement des douleurs chroniques</li>
+                            <li>• Mobilisation articulaire</li>
+                            <li>• Renforcement musculaire</li>
+                        </ul>
+                        <a href="rendez-vous.html" class="service-link">Prendre rendez-vous →</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="public/imgi_4_500642460_18067639757293413_4779110126501716000_n.jpg" alt="Physiothérapie Gériatrique">
+                    <div class="service-content">
+                        <div class="service-icon">👴</div>
+                        <h3>Physiothérapie Gériatrique</h3>
+                        <p>Soins spécialisés pour personnes âgées, maintien de l'autonomie et prévention des chutes. Amélioration de la qualité de vie des seniors.</p>
+                        <ul class="service-details">
+                            <li>• Prévention des chutes</li>
+                            <li>• Maintien de l'équilibre</li>
+                            <li>• Exercices d'autonomie</li>
+                            <li>• Rééducation de la marche</li>
+                        </ul>
+                        <a href="rendez-vous.html" class="service-link">Prendre rendez-vous →</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="public/imgi_38_398643190_1052203466020282_7156993764329094768_n.jpeg" alt="Physiothérapie pédiatrique">
+                    <div class="service-content">
+                        <div class="service-icon">👶</div>
+                        <h3>Physiothérapie pédiatrique</h3>
+                        <p>Accompagnement du développement moteur et traitement des troubles chez l'enfant. Prise en charge adaptée aux besoins spécifiques des plus jeunes.</p>
+                        <ul class="service-details">
+                            <li>• Retards de développement moteur</li>
+                            <li>• Troubles de la posture</li>
+                            <li>• Rééducation ludique</li>
+                            <li>• Accompagnement des parents</li>
+                        </ul>
+                        <a href="rendez-vous.html" class="service-link">Prendre rendez-vous →</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="public/imgi_37_468281671_18049438145293413_745364416010972908_n.jpg" alt="Physiothérapie neurologique">
+                    <div class="service-content">
+                        <div class="service-icon">🧠</div>
+                        <h3>Physiothérapie neurologique</h3>
+                        <p>Rééducation après AVC, traumatisme crânien, sclérose en plaques et autres pathologies neurologiques. Récupération des fonctions motrices.</p>
+                        <ul class="service-details">
+                            <li>• Rééducation post-AVC</li>
+                            <li>• Troubles de l'équilibre</li>
+                            <li>• Récupération motrice</li>
+                            <li>• Stimulation neurologique</li>
+                        </ul>
+                        <a href="rendez-vous.html" class="service-link">Prendre rendez-vous →</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="public/imgi_35_468788983_18049689374293413_6002179877574440013_n.jpg" alt="Physiothérapie respiratoire">
+                    <div class="service-content">
+                        <div class="service-icon">🫁</div>
+                        <h3>Physiothérapie respiratoire</h3>
+                        <p>Amélioration de la fonction respiratoire et traitement des troubles pulmonaires. Techniques de désencombrement et rééducation respiratoire.</p>
+                        <ul class="service-details">
+                            <li>• Désencombrement bronchique</li>
+                            <li>• Rééducation respiratoire</li>
+                            <li>• Exercices de ventilation</li>
+                            <li>• Prévention des infections</li>
+                        </ul>
+                        <a href="rendez-vous.html" class="service-link">Prendre rendez-vous →</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="public/imgi_33_468757729_18049760813293413_4164453919047668672_n.jpg" alt="Physiothérapie obstétricale">
+                    <div class="service-content">
+                        <div class="service-icon">🤱</div>
+                        <h3>Physiothérapie obstétricale</h3>
+                        <p>Accompagnement pré et post-natal, rééducation périnéale et préparation à l'accouchement. Suivi personnalisé pour les futures et jeunes mamans.</p>
+                        <ul class="service-details">
+                            <li>• Préparation à l'accouchement</li>
+                            <li>• Rééducation périnéale</li>
+                            <li>• Soulagement des douleurs</li>
+                            <li>• Récupération post-partum</li>
+                        </ul>
+                        <a href="rendez-vous.html" class="service-link">Prendre rendez-vous →</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="public/imgi_30_469468594_18050453231293413_7213971266497959601_n.jpg" alt="Physiothérapie sportive">
+                    <div class="service-content">
+                        <div class="service-icon">⚡</div>
+                        <h3>Physiothérapie sportive</h3>
+                        <p>Prévention et traitement des blessures sportives, optimisation des performances. Accompagnement des sportifs de tous niveaux.</p>
+                        <ul class="service-details">
+                            <li>• Traitement des blessures</li>
+                            <li>• Prévention des récidives</li>
+                            <li>• Optimisation des performances</li>
+                            <li>• Retour au sport sécurisé</li>
+                        </ul>
+                        <a href="rendez-vous.html" class="service-link">Prendre rendez-vous →</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="public/imgi_11_482230671_18059299208293413_3543913593041663820_n.jpg" alt="Activité physique adaptée">
+                    <div class="service-content">
+                        <div class="service-icon">🏋️</div>
+                        <h3>Activité physique adaptée</h3>
+                        <p>Programmes personnalisés pour diabète, hypertension artérielle et obésité. Exercices adaptés aux pathologies chroniques.</p>
+                        <ul class="service-details">
+                            <li>• Programmes pour diabétiques</li>
+                            <li>• Gestion de l'hypertension</li>
+                            <li>• Perte de poids encadrée</li>
+                            <li>• Suivi médical intégré</li>
+                        </ul>
+                        <a href="rendez-vous.html" class="service-link">Prendre rendez-vous →</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="public/imgi_4_500642460_18067639757293413_4779110126501716000_n.jpg" alt="Massage thérapeutique">
+                    <div class="service-content">
+                        <div class="service-icon">🤲</div>
+                        <h3>Massage thérapeutique</h3>
+                        <p>Techniques de massage pour soulagement de la douleur et relaxation musculaire. Approche holistique du bien-être.</p>
+                        <ul class="service-details">
+                            <li>• Massage relaxant</li>
+                            <li>• Massage thérapeutique</li>
+                            <li>• Drainage lymphatique</li>
+                            <li>• Soulagement des tensions</li>
+                        </ul>
+                        <a href="rendez-vous.html" class="service-link">Prendre rendez-vous →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="facility-showcase">
+                <div class="facility-content">
+                    <div class="facility-text">
+                        <h3>Des équipements modernes pour votre rééducation</h3>
+                        <p>Notre centre dispose d'équipements de pointe et d'espaces spécialement conçus pour offrir les meilleurs soins de physiothérapie dans un environnement confortable et professionnel.</p>
+                        <a href="contact.html" class="btn-primary">Visiter notre centre</a>
+                    </div>
+                    <div class="facility-images">
+                        <img src="public/imgi_26_470986232_2225958974471591_3325061836061261007_n.jpg" alt="Centre Physio Phelms">
+                        <img src="public/imgi_11_482230671_18059299208293413_3543913593041663820_n.jpg" alt="Salle d'exercices">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h3>Besoin d'un service spécialisé ?</h3>
+            <p>Contactez-nous pour discuter de vos besoins spécifiques et trouver le traitement le plus adapté.</p>
+            <div class="cta-buttons">
+                <a href="rendez-vous.html" class="btn-primary">Prendre rendez-vous</a>
+                <a href="contact.html" class="btn-secondary">Nous contacter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="public/imgi_1_497090745_18066544382293413_4831932850810085523_n.jpg" alt="Physio Phelms Logo">
+                        <div class="footer-logo-text">
+                            <h3>Physio Phelms</h3>
+                            <p>Un coup de main vers une santé optimale</p>
+                        </div>
+                    </div>
+                    <p>Votre partenaire santé pour une récupération optimale.</p>
+                    <div class="social-links">
+                        <a href="tel:+22375025959" class="social-link">📞</a>
+                        <a href="mailto:PhysioPhelms2020@gmail.com" class="social-link">📧</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Nos Services</h3>
+                    <ul>
+                        <li><a href="services.html">Physiothérapie générale</a></li>
+                        <li><a href="services.html">Physiothérapie Gériatrique</a></li>
+                        <li><a href="services.html">Physiothérapie pédiatrique</a></li>
+                        <li><a href="services.html">Physiothérapie neurologique</a></li>
+                        <li><a href="services.html">Physiothérapie sportive</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Liens Rapides</h3>
+                    <ul>
+                        <li><a href="accueil.html">Accueil</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="apropos.html">À propos</a></li>
+                        <li><a href="rendez-vous.html">Rendez-vous</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>Missabougou à côté de l'hôpital du Mali<br>Bamako, Mali 🇲🇱</div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>+223 75 02 59 59</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span>PhysioPhelms2020@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2024 Physio Phelms. Tous droits réservés.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="common.js"></script>
+</body>
+</html>

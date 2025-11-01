@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Physio Phelms</title>
+    <meta name="description" content="Physio Phelms - Centre de rééducation spécialisé en physiothérapie. Un coup de main vers une santé optimale.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpeg" href="public/imgi_1_497090745_18066544382293413_4831932850810085523_n.jpg">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="public/imgi_1_497090745_18066544382293413_4831932850810085523_n.jpg" alt="Physio Phelms Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h1>Physio Phelms</h1>
+                        <p>Un coup de main vers une santé optimale</p>
+                    </div>
+                </div>
+                
+                <nav class="nav desktop-nav">
+                    <a href="accueil.html" class="active">Accueil</a>
+                    <a href="services.html">Services</a>
+                    <a href="apropos.html">À propos</a>
+                    <a href="rendez-vous.html">Rendez-vous</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="rendez-vous.html" class="btn-primary">Prendre RDV</a>
+                </nav>
+                
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            
+            <nav class="mobile-nav" id="mobileNav">
+                <a href="accueil.html" onclick="closeMobileMenu()">Accueil</a>
+                <a href="services.html" onclick="closeMobileMenu()">Services</a>
+                <a href="apropos.html" onclick="closeMobileMenu()">À propos</a>
+                <a href="rendez-vous.html" onclick="closeMobileMenu()">Rendez-vous</a>
+                <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
+                <a href="rendez-vous.html" class="btn-primary" onclick="closeMobileMenu()">Prendre RDV</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Un coup de main vers <span class="gradient-text">une santé optimale</span></h1>
+                    <p>Chez Physio Phelms, nous vous accompagnons dans votre parcours de guérison avec expertise, bienveillance et des soins personnalisés adaptés à vos besoins.</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="rendez-vous.html" class="btn-primary">
+                            Prendre rendez-vous
+                            <span class="arrow">→</span>
+                        </a>
+                        <a href="services.html" class="btn-secondary">Nos services</a>
+                    </div>
+                    
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-icon">👥</div>
+                            <div class="stat-number">2000+</div>
+                            <div class="stat-label">Patients satisfaits</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-icon">🏆</div>
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Années d'expérience</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-icon">⏰</div>
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Disponibilité urgence</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="hero-main-image">
+                        <img src="public/imgi_15_486078345_1076750177807929_1162981680923438580_n.jpg" alt="Équipe Physio Phelms devant le centre">
+                        <div class="image-overlay">
+                            <h3>Notre équipe professionnelle</h3>
+                            <p>Des experts dévoués à votre bien-être</p>
+                        </div>
+                    </div>
+                    
+                    <div class="consultation-card">
+                        <h3>Consultation gratuite</h3>
+                        <p>Bénéficiez d'un premier entretien gratuit pour évaluer vos besoins.</p>
+                        <ul>
+                            <li>• Évaluation complète incluse</li>
+                            <li>• Plan de traitement personnalisé</li>
+                        </ul>
+                        <a href="rendez-vous.html" class="btn-primary">Réserver maintenant</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="services-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos <span class="gradient-text">Services</span></h2>
+                <p>Une gamme complète de services de physiothérapie pour tous vos besoins.</p>
+            </div>
+            
+            <div class="services-grid-preview">
+                <div class="service-card">
+                    <img src="public/imgi_11_482230671_18059299208293413_3543913593041663820_n.jpg" alt="Physiothérapie générale">
+                    <div class="service-content">
+                        <div class="service-icon">🏥</div>
+                        <h3>Physiothérapie générale</h3>
+                        <p>Traitement complet pour troubles musculo-squelettiques.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="public/imgi_4_500642460_18067639757293413_4779110126501716000_n.jpg" alt="Physiothérapie Gériatrique">
+                    <div class="service-content">
+                        <div class="service-icon">👴</div>
+                        <h3>Physiothérapie Gériatrique</h3>
+                        <p>Soins spécialisés pour personnes âgées.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="public/imgi_30_469468594_18050453231293413_7213971266497959601_n.jpg" alt="Physiothérapie sportive">
+                    <div class="service-content">
+                        <div class="service-icon">⚡</div>
+                        <h3>Physiothérapie sportive</h3>
+                        <p>Prévention et traitement des blessures sportives.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="services.html" class="btn-primary">Voir tous nos services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pourquoi choisir <span class="gradient-text">Physio Phelms</span> ?</h2>
+                <p>Notre engagement envers l'excellence et votre bien-être</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍⚕️</div>
+                    <h3>Équipe experte</h3>
+                    <p>Professionnels certifiés avec plus de 15 ans d'expérience</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🏥</div>
+                    <h3>Équipements modernes</h3>
+                    <p>Technologies de pointe pour des soins optimaux</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Approche personnalisée</h3>
+                    <p>Plans de traitement adaptés à chaque patient</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>Emplacement idéal</h3>
+                    <p>À côté de l'hôpital du Mali, facilement accessible</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h3>Prêt à commencer votre parcours de guérison ?</h3>
+            <p>Contactez-nous dès maintenant pour planifier votre première consultation gratuite.</p>
+            <div class="cta-buttons">
+                <a href="rendez-vous.html" class="btn-primary">Prendre rendez-vous</a>
+                <a href="tel:+22375025959" class="btn-secondary">Appeler maintenant</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="public/imgi_1_497090745_18066544382293413_4831932850810085523_n.jpg" alt="Physio Phelms Logo">
+                        <div class="footer-logo-text">
+                            <h3>Physio Phelms</h3>
+                            <p>Un coup de main vers une santé optimale</p>
+                        </div>
+                    </div>
+                    <p>Votre partenaire santé pour une récupération optimale.</p>
+                    <div class="social-links">
+                        <a href="tel:+22375025959" class="social-link">📞</a>
+                        <a href="mailto:PhysioPhelms2020@gmail.com" class="social-link">📧</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Nos Services</h3>
+                    <ul>
+                        <li><a href="services.html">Physiothérapie générale</a></li>
+                        <li><a href="services.html">Physiothérapie Gériatrique</a></li>
+                        <li><a href="services.html">Physiothérapie pédiatrique</a></li>
+                        <li><a href="services.html">Physiothérapie neurologique</a></li>
+                        <li><a href="services.html">Physiothérapie sportive</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Liens Rapides</h3>
+                    <ul>
+                        <li><a href="accueil.html">Accueil</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="apropos.html">À propos</a></li>
+                        <li><a href="rendez-vous.html">Rendez-vous</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>Missabougou à côté de l'hôpital du Mali<br>Bamako, Mali 🇲🇱</div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>+223 75 02 59 59</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span>PhysioPhelms2020@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2024 Physio Phelms. Tous droits réservés.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="common.js"></script>
+</body>
+</html>

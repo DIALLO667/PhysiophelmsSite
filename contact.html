@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Physio Phelms</title>
+    <meta name="description" content="Contactez Physio Phelms à Missabougou, Bamako. Téléphone, email, adresse et horaires d'ouverture.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpeg" href="public/imgi_1_497090745_18066544382293413_4831932850810085523_n.jpg">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="public/imgi_1_497090745_18066544382293413_4831932850810085523_n.jpg" alt="Physio Phelms Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h1>Physio Phelms</h1>
+                        <p>Un coup de main vers une santé optimale</p>
+                    </div>
+                </div>
+                
+                <nav class="nav desktop-nav">
+                    <a href="accueil.html">Accueil</a>
+                    <a href="services.html">Services</a>
+                    <a href="apropos.html">À propos</a>
+                    <a href="rendez-vous.html">Rendez-vous</a>
+                    <a href="contact.html" class="active">Contact</a>
+                    <a href="rendez-vous.html" class="btn-primary">Prendre RDV</a>
+                </nav>
+                
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            
+            <nav class="mobile-nav" id="mobileNav">
+                <a href="accueil.html" onclick="closeMobileMenu()">Accueil</a>
+                <a href="services.html" onclick="closeMobileMenu()">Services</a>
+                <a href="apropos.html" onclick="closeMobileMenu()">À propos</a>
+                <a href="rendez-vous.html" onclick="closeMobileMenu()">Rendez-vous</a>
+                <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
+                <a href="rendez-vous.html" class="btn-primary" onclick="closeMobileMenu()">Prendre RDV</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Nous <span class="gradient-text">Contacter</span></h1>
+            <p>Retrouvez-nous facilement grâce à notre emplacement central et nos multiples moyens de contact.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3>Informations de contact</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h4>Adresse</h4>
+                                <p>Missabougou à côté de l'hôpital du Mali<br>Bamako, Mali 🇲🇱</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-details">
+                                <h4>Téléphone</h4>
+                                <p>+223 75 02 59 59</p>
+                                <p class="contact-note">Disponible 24h/24 pour urgences</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>PhysioPhelms2020@gmail.com</p>
+                                <p class="contact-note">Réponse sous 24h</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">🕐</div>
+                            <div class="contact-details">
+                                <h4>Horaires</h4>
+                                <p>Lundi - Vendredi : 8h00 - 18h00</p>
+                                <p>Samedi : 8h00 - 12h00</p>
+                                <p class="contact-closed">Dimanche : Fermé</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="transport-card">
+                        <h3>Comment nous rejoindre</h3>
+                        <div class="transport-item">
+                            <span class="transport-icon">🚗</span>
+                            <div>
+                                <p><strong>En voiture</strong></p>
+                                <p>Parking disponible sur place</p>
+                            </div>
+                        </div>
+                        <div class="transport-item">
+                            <span class="transport-icon">🚌</span>
+                            <div>
+                                <p><strong>Transport en commun</strong></p>
+                                <p>Accessible par les lignes de bus locales</p>
+                            </div>
+                        </div>
+                        <div class="transport-item">
+                            <span class="transport-icon">🏥</span>
+                            <div>
+                                <p><strong>Repère</strong></p>
+                                <p>À côté de l'hôpital du Mali</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quick-contact-card">
+                        <h3>Contact rapide</h3>
+                        <p>Besoin d'une réponse immédiate ? Utilisez nos moyens de contact direct.</p>
+                        <div class="quick-contact-buttons">
+                            <a href="tel:+22375025959" class="btn-primary">
+                                📞 Appeler maintenant
+                            </a>
+                            <a href="mailto:PhysioPhelms2020@gmail.com" class="btn-secondary">
+                                📧 Envoyer un email
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="facility-showcase-contact">
+                    <div class="facility-main">
+                        <img src="public/imgi_26_470986232_2225958974471591_3325061836061261007_n.jpg" alt="Centre Physio Phelms - Vue extérieure">
+                        <div class="facility-overlay">
+                            <h3>Notre centre à Missabougou</h3>
+                            <p>Un bâtiment moderne et accessible, situé à côté de l'hôpital du Mali pour votre commodité.</p>
+                            <button class="btn-primary">Voir l'itinéraire</button>
+                        </div>
+                    </div>
+                    
+                    <div class="facility-grid">
+                        <img src="public/imgi_11_482230671_18059299208293413_3543913593041663820_n.jpg" alt="Salle de rééducation">
+                        <img src="public/imgi_27_470157299_1100928428235394_8159752160845334178_n.jpg" alt="Équipe au travail">
+                    </div>
+                    
+                    <div class="facility-features">
+                        <h3>Nos installations</h3>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <span class="feature-icon">🏥</span>
+                                <span>Équipements modernes</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">♿</span>
+                                <span>Accès handicapés</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🚗</span>
+                                <span>Parking gratuit</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">❄️</span>
+                                <span>Climatisation</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🧼</span>
+                                <span>Normes d'hygiène</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">📶</span>
+                                <span>WiFi gratuit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="contact-form-section">
+                <div class="section-header">
+                    <h2>Envoyez-nous un <span class="gradient-text">message</span></h2>
+                    <p>Vous avez une question ? N'hésitez pas à nous écrire, nous vous répondrons rapidement.</p>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName">👤 Nom complet *</label>
+                                <input type="text" id="contactName" name="contactName" required placeholder="Votre nom complet">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">📧 Email *</label>
+                                <input type="email" id="contactEmail" name="contactEmail" required placeholder="votre@email.com">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactPhone">📞 Téléphone</label>
+                                <input type="tel" id="contactPhone" name="contactPhone" placeholder="+223 75 02 59 59">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactSubject">📋 Sujet *</label>
+                                <select id="contactSubject" name="contactSubject" required>
+                                    <option value="">Sélectionnez un sujet</option>
+                                    <option value="Information générale">Information générale</option>
+                                    <option value="Prise de rendez-vous">Prise de rendez-vous</option>
+                                    <option value="Question sur un service">Question sur un service</option>
+                                    <option value="Réclamation">Réclamation</option>
+                                    <option value="Partenariat">Partenariat</option>
+                                    <option value="Autre">Autre</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactMessage">💬 Message *</label>
+                            <textarea id="contactMessage" name="contactMessage" rows="6" required placeholder="Écrivez votre message ici..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary btn-full">Envoyer le message</button>
+                        
+                        <p class="form-note">* Champs obligatoires. Nous vous répondrons sous 24h.</p>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <h3>Prêt à commencer votre parcours de guérison ?</h3>
+                <p>Contactez-nous dès maintenant pour planifier votre première consultation gratuite.</p>
+                <div class="cta-buttons">
+                    <a href="rendez-vous.html" class="btn-primary">Prendre rendez-vous</a>
+                    <a href="tel:+22375025959" class="btn-secondary">Appeler maintenant</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="public/imgi_1_497090745_18066544382293413_4831932850810085523_n.jpg" alt="Physio Phelms Logo">
+                        <div class="footer-logo-text">
+                            <h3>Physio Phelms</h3>
+                            <p>Un coup de main vers une santé optimale</p>
+                        </div>
+                    </div>
+                    <p>Votre partenaire santé pour une récupération optimale.</p>
+                    <div class="social-links">
+                        <a href="tel:+22375025959" class="social-link">📞</a>
+                        <a href="mailto:PhysioPhelms2020@gmail.com" class="social-link">📧</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Nos Services</h3>
+                    <ul>
+                        <li><a href="services.html">Physiothérapie générale</a></li>
+                        <li><a href="services.html">Physiothérapie Gériatrique</a></li>
+                        <li><a href="services.html">Physiothérapie pédiatrique</a></li>
+                        <li><a href="services.html">Physiothérapie neurologique</a></li>
+                        <li><a href="services.html">Physiothérapie sportive</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Liens Rapides</h3>
+                    <ul>
+                        <li><a href="accueil.html">Accueil</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="apropos.html">À propos</a></li>
+                        <li><a href="rendez-vous.html">Rendez-vous</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>Missabougou à côté de l'hôpital du Mali<br>Bamako, Mali 🇲🇱</div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>+223 75 02 59 59</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span>PhysioPhelms2020@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2024 Physio Phelms. Tous droits réservés.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="common.js"></script>
+    <script>
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Simple validation
+            const requiredFields = ['contactName', 'contactEmail', 'contactSubject', 'contactMessage'];
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                const input = document.getElementById(field);
+                if (!data[field]) {
+                    input.style.borderColor = '#dc2626';
+                    isValid = false;
+                } else {
+                    input.style.borderColor = '#e5e7eb';
+                }
+            });
+            
+            if (!isValid) {
+                alert('Veuillez remplir tous les champs obligatoires.');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(data.contactEmail)) {
+                document.getElementById('contactEmail').style.borderColor = '#dc2626';
+                alert('Veuillez entrer une adresse email valide.');
+                return;
+            }
+            
+            // Success message
+            alert('Message envoyé ! Nous vous répondrons sous 24h.');
+            
+            // Reset form
+            this.reset();
+            
+            // In a real application, you would send this data to your server
+            console.log('Contact data:', data);
+        });
+    </script>
+</body>
+</html>
