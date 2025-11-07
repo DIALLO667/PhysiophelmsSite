@@ -140,4 +140,24 @@ style.textContent = `
         }
     }
 `;
+const backToTopButton = document.getElementById('backToTop');
+
+if (backToTopButton) {
+    // Afficher/masquer le bouton lors du scroll
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    });
+
+    // Remonter en haut au clic
+    backToTopButton.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
 document.head.appendChild(style);

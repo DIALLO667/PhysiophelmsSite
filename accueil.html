@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - Physio Phelms</title>
-    <meta name="description" content="Physio Phelms - Centre de rééducation spécialisé en physiothérapie. Un coup de main vers une santé optimale.">
-    <link rel="stylesheet" href="styles.css">
+    <title>Physio Phelms - Centre de physiothérapie à Bamako</title>
+<meta name="description" content="Physiophelms propose des services de physiothérapie générale, pédiatrique et neurologique à Bamako. Améliorez votre santé avec nos experts.">
+    <meta name="keywords" content="Physio Phelms, physiothérapie, rééducation, bien-être, santé, Bamako, Mali, services de physiothérapie, centre de physiothérapie, soins de santé, thérapie physique">
+ <meta name="author" content="Physio Phelms">
+<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="icon" type="image/jpeg" href="public/imgi_1_497090745_18066544382293413_4831932850810085523_n.jpg">
+    <!-- Open Graph (Facebook, WhatsApp, etc.) -->
+<meta property="og:title" content="Physio Phelms - Centre de physiothérapie à Bamako">
+<meta property="og:description" content="Physio Phelms, votre centre de physiothérapie à Bamako. Soins personnalisés, experts qualifiés, et équipements modernes.">
+<meta property="og:image" content="https://physiophelms.sn/public/logop.JPG">
+<meta property="og:url" content="https://physiophelms.sn/">
+<meta property="og:type" content="website">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Physio Phelms - Physiothérapie à Bamako">
+<meta name="twitter:description" content="Soins de physiothérapie personnalisés pour une santé optimale.">
+<meta name="twitter:image" content="https://physiophelms.sn/public/logop.JPG">
+
 </head>
 <body>
     <!-- Header -->
@@ -14,17 +31,17 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="public/imgi_1_497090745_18066544382293413_4831932850810085523_n.jpg" alt="Physio Phelms Logo" class="logo-img">
+                    <img src="public/logop.JPG" alt="Physio Phelms Logo" class="logo-img">
                     <div class="logo-text">
                         <h1>Physio Phelms</h1>
-                        <p>Un coup de main vers une santé optimale</p>
+                        <p>Sante optimal</p>
                     </div>
                 </div>
                 
                 <nav class="nav desktop-nav">
                     <a href="accueil.html" class="active">Accueil</a>
                     <a href="services.html">Services</a>
-                    <a href="apropos.html">À propos</a>
+                    <a href="actualite.html">Actualite</a>
                     <a href="rendez-vous.html">Rendez-vous</a>
                     <a href="contact.html">Contact</a>
                     <a href="rendez-vous.html" class="btn-primary">Prendre RDV</a>
@@ -40,12 +57,13 @@
             <nav class="mobile-nav" id="mobileNav">
                 <a href="accueil.html" onclick="closeMobileMenu()">Accueil</a>
                 <a href="services.html" onclick="closeMobileMenu()">Services</a>
-                <a href="apropos.html" onclick="closeMobileMenu()">À propos</a>
+                <a href="actualite.html" onclick="closeMobileMenu()">Actualite</a>
                 <a href="rendez-vous.html" onclick="closeMobileMenu()">Rendez-vous</a>
                 <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
                 <a href="rendez-vous.html" class="btn-primary" onclick="closeMobileMenu()">Prendre RDV</a>
             </nav>
         </div>
+       
     </header>
 
     <!-- Hero Section -->
@@ -63,44 +81,27 @@
                         </a>
                         <a href="services.html" class="btn-secondary">Nos services</a>
                     </div>
-                    
                     <div class="stats">
-                        <div class="stat">
-                            <div class="stat-icon">👥</div>
-                            <div class="stat-number">2000+</div>
-                            <div class="stat-label">Patients satisfaits</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-icon">🏆</div>
-                            <div class="stat-number">15+</div>
-                            <div class="stat-label">Années d'expérience</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-icon">⏰</div>
-                            <div class="stat-number">24/7</div>
-                            <div class="stat-label">Disponibilité urgence</div>
-                        </div>
-                    </div>
+    <div class="stat">
+        <div class="stat-icon"><i class="fas fa-users"></i></div>
+        <div class="stat-number">2000+</div>
+        <div class="stat-label">Patients satisfaits</div>
+    </div>
+    <div class="stat">
+        <div class="stat-icon"><i class="fas fa-award"></i></div>
+        <div class="stat-number">15+</div>
+        <div class="stat-label">Années d'expérience</div>
+    </div>
+    <div class="stat">
+        <div class="stat-icon"><i class="fas fa-clock"></i></div>
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">Disponibilité</div>
+    </div>
+</div>
+                 
                 </div>
                 
-                <div class="hero-image">
-                    <div class="hero-main-image">
-                        <img src="public/imgi_15_486078345_1076750177807929_1162981680923438580_n.jpg" alt="Équipe Physio Phelms devant le centre">
-                        <div class="image-overlay">
-                            <h3>Notre équipe professionnelle</h3>
-                            <p>Des experts dévoués à votre bien-être</p>
-                        </div>
-                    </div>
-                    
-                    <div class="consultation-card">
-                        <h3>Consultation gratuite</h3>
-                        <p>Bénéficiez d'un premier entretien gratuit pour évaluer vos besoins.</p>
-                        <ul>
-                            <li>• Évaluation complète incluse</li>
-                            <li>• Plan de traitement personnalisé</li>
-                        </ul>
-                        <a href="rendez-vous.html" class="btn-primary">Réserver maintenant</a>
-                    </div>
+     
                 </div>
             </div>
         </div>
@@ -118,7 +119,8 @@
                 <div class="service-card">
                     <img src="public/imgi_11_482230671_18059299208293413_3543913593041663820_n.jpg" alt="Physiothérapie générale">
                     <div class="service-content">
-                        <div class="service-icon">🏥</div>
+                         <div class="service-icon"><i class="fas fa-hospital"></i></div>
+
                         <h3>Physiothérapie générale</h3>
                         <p>Traitement complet pour troubles musculo-squelettiques.</p>
                     </div>
@@ -127,7 +129,7 @@
                 <div class="service-card">
                     <img src="public/imgi_4_500642460_18067639757293413_4779110126501716000_n.jpg" alt="Physiothérapie Gériatrique">
                     <div class="service-content">
-                        <div class="service-icon">👴</div>
+                       <div class="service-icon"><i class="fas fa-user-clock"></i></div>
                         <h3>Physiothérapie Gériatrique</h3>
                         <p>Soins spécialisés pour personnes âgées.</p>
                     </div>
@@ -136,7 +138,7 @@
                 <div class="service-card">
                     <img src="public/imgi_30_469468594_18050453231293413_7213971266497959601_n.jpg" alt="Physiothérapie sportive">
                     <div class="service-content">
-                        <div class="service-icon">⚡</div>
+                        <div class="service-icon"><i class="fas fa-running"></i></div>
                         <h3>Physiothérapie sportive</h3>
                         <p>Prévention et traitement des blessures sportives.</p>
                     </div>
@@ -159,25 +161,33 @@
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">👨‍⚕️</div>
+                      <div class="feature-icon">
+            <i class="fas fa-user-md"></i>
+        </div>
                     <h3>Équipe experte</h3>
                     <p>Professionnels certifiés avec plus de 15 ans d'expérience</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">🏥</div>
+                     <div class="feature-icon">
+            <i class="fas fa-hospital"></i>
+        </div>
                     <h3>Équipements modernes</h3>
                     <p>Technologies de pointe pour des soins optimaux</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
+                    <div class="feature-icon">
+            <i class="fas fa-heartbeat"></i>
+        </div>
                     <h3>Approche personnalisée</h3>
                     <p>Plans de traitement adaptés à chaque patient</p>
                 </div>
                 
                 <div class="feature-card">
-                    <div class="feature-icon">📍</div>
+                      <div class="feature-icon">
+            <i class="fas fa-map-marker-alt"></i>
+        </div>
                     <h3>Emplacement idéal</h3>
                     <p>À côté de l'hôpital du Mali, facilement accessible</p>
                 </div>
@@ -232,7 +242,7 @@
                     <ul>
                         <li><a href="accueil.html">Accueil</a></li>
                         <li><a href="services.html">Services</a></li>
-                        <li><a href="apropos.html">À propos</a></li>
+                        <li><a href="actualite.html">À Actualite</a></li>
                         <li><a href="rendez-vous.html">Rendez-vous</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
@@ -264,6 +274,10 @@
             </div>
         </div>
     </footer>
+     <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
 
     <script src="common.js"></script>
 </body>

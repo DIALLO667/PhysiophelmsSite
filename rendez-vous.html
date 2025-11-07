@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rendez-vous - Physio Phelms</title>
+    <title>Physio Phelms - Centre de physiothérapie à Bamako</title>
     <meta name="description" content="Prenez rendez-vous en ligne avec Physio Phelms. Consultation gratuite et prise en charge personnalisée.">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="icon" type="image/jpeg" href="public/imgi_1_497090745_18066544382293413_4831932850810085523_n.jpg">
 </head>
 <body>
@@ -14,7 +16,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="public/imgi_1_497090745_18066544382293413_4831932850810085523_n.jpg" alt="Physio Phelms Logo" class="logo-img">
+                    <img src="public/logop.JPG" alt="Physio Phelms Logo" class="logo-img">
                     <div class="logo-text">
                         <h1>Physio Phelms</h1>
                         <p>Un coup de main vers une santé optimale</p>
@@ -24,7 +26,7 @@
                 <nav class="nav desktop-nav">
                     <a href="accueil.html">Accueil</a>
                     <a href="services.html">Services</a>
-                    <a href="apropos.html">À propos</a>
+                    <a href="actualite.html">Actualite</a>
                     <a href="rendez-vous.html" class="active">Rendez-vous</a>
                     <a href="contact.html">Contact</a>
                     <a href="rendez-vous.html" class="btn-primary">Prendre RDV</a>
@@ -40,7 +42,7 @@
             <nav class="mobile-nav" id="mobileNav">
                 <a href="accueil.html" onclick="closeMobileMenu()">Accueil</a>
                 <a href="services.html" onclick="closeMobileMenu()">Services</a>
-                <a href="apropos.html" onclick="closeMobileMenu()">À propos</a>
+                <a href="actualite.html" onclick="closeMobileMenu()"> Actualite</a>
                 <a href="rendez-vous.html" onclick="closeMobileMenu()">Rendez-vous</a>
                 <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
                 <a href="rendez-vous.html" class="btn-primary" onclick="closeMobileMenu()">Prendre RDV</a>
@@ -53,6 +55,49 @@
         <div class="container">
             <h1>Prendre <span class="gradient-text">Rendez-vous</span></h1>
             <p>Réservez votre consultation en ligne. Nous vous contacterons pour confirmer votre rendez-vous.</p>
+        </div>
+    </section>
+ <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <!-- <div class="section-header">
+                <h2>Comment ça <span class="gradient-text">fonctionne</span> ?</h2>
+                <p>Un processus simple et efficace pour votre prise en charge</p>
+            </div> -->
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Réservation</h3>
+                        <p>Remplissez le formulaire en ligne ou appelez-nous directement</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Confirmation</h3>
+                        <p>Nous vous contactons sous 24h pour confirmer votre rendez-vous</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Consultation</h3>
+                        <p>Bilan complet gratuit et établissement de votre plan de traitement</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Traitement</h3>
+                        <p>Début de votre parcours de guérison avec un suivi personnalisé</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -135,18 +180,18 @@
                             </div>
                         </div>
                         
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="urgency">Niveau d'urgence</label>
                             <select id="urgency" name="urgency">
                                 <option value="normal">Normal</option>
                                 <option value="urgent">Urgent</option>
                                 <option value="tres-urgent">Très urgent</option>
                             </select>
-                        </div>
+                        </div> -->
                         
                         <div class="form-group">
                             <label for="message">💬 Message (optionnel)</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Décrivez brièvement votre problème, vos symptômes ou vos attentes..."></textarea>
+                            <textarea id="message" name="message" rows="4" placeholder="Entrez votre message..."></textarea>
                         </div>
                         
                         <button type="submit" class="btn-primary btn-full">Demander un rendez-vous</button>
@@ -224,50 +269,7 @@
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section class="process-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Comment ça <span class="gradient-text">fonctionne</span> ?</h2>
-                <p>Un processus simple et efficace pour votre prise en charge</p>
-            </div>
-            
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Réservation</h3>
-                        <p>Remplissez le formulaire en ligne ou appelez-nous directement</p>
-                    </div>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Confirmation</h3>
-                        <p>Nous vous contactons sous 24h pour confirmer votre rendez-vous</p>
-                    </div>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Consultation</h3>
-                        <p>Bilan complet gratuit et établissement de votre plan de traitement</p>
-                    </div>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>Traitement</h3>
-                        <p>Début de votre parcours de guérison avec un suivi personnalisé</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+   
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -303,7 +305,7 @@
                     <ul>
                         <li><a href="accueil.html">Accueil</a></li>
                         <li><a href="services.html">Services</a></li>
-                        <li><a href="apropos.html">À propos</a></li>
+                        <li><a href="actualite.html">Actualite</a></li>
                         <li><a href="rendez-vous.html">Rendez-vous</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
@@ -335,6 +337,10 @@
             </div>
         </div>
     </footer>
+         <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
 
     <script src="common.js"></script>
     <script>

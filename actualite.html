@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Physio Phelms - Centre de physiothérapie à Bamako</title>
+   <meta name="description" content="Physiophelms propose des services de physiothérapie générale, pédiatrique et neurologique à Bamako. Améliorez votre santé avec nos experts.">
+    <meta name="keywords" content="Physio Phelms, physiothérapie, rééducation, bien-être, santé, Bamako, Mali, services de physiothérapie, centre de physiothérapie, soins de santé, thérapie physique">
+    <meta name="author" content="Physio Phelms">
+    <meta property="og:title" content="Actualités - Physio Phelms">
+    <meta property="og:description" content="Découvrez notre histoire, notre mission et notre engagement envers votre bien-être. Physio Phelms, votre partenaire santé au Mali.">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="actualite-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="public/logop.JPG" alt="Physio Phelms Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h1>Physio Phelms</h1>
+                        <p>Un coup de main vers une santé optimale</p>
+                    </div>
+                </div>
+                
+                <nav class="nav desktop-nav">
+                    <a href="accueil.html">Accueil</a>
+                    <a href="services.html">Services</a>
+                    <a href="actualite.html" class="active">Actualité</a>
+                    <a href="rendez-vous.html">Rendez-vous</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="rendez-vous.html" class="btn-nav-primary">Prendre RDV</a>
+                </nav>
+                
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            
+            <nav class="mobile-nav" id="mobileNav">
+                <a href="accueil.html" onclick="closeMobileMenu()">Accueil</a>
+                <a href="services.html" onclick="closeMobileMenu()">Services</a>
+                <a href="actualite.html" onclick="closeMobileMenu()">Actualité</a>
+                <a href="rendez-vous.html" onclick="closeMobileMenu()">Rendez-vous</a>
+                <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
+                <a href="rendez-vous.html" class="btn-nav-primary" onclick="closeMobileMenu()">Prendre RDV</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-pattern"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Actualités de <span class="highlight">Physio Phelms</span></h1>
+                <p>Découvrez notre histoire, notre mission et notre engagement envers votre bien-être.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notre Histoire Section -->
+    <section class="section histoire-section">
+        <div class="container">
+            <div class="grid-2-cols">
+                <div class="content-side">
+                    <div class="badge">
+                        <i class="fas fa-heart"></i>
+                        <span>Notre Histoire</span>
+                    </div>
+                    <h2>Plus de 15 ans au service de votre santé</h2>
+                    <p class="text-large">
+                        Physio Phelms est votre partenaire de confiance pour un accompagnement personnalisé vers une santé optimale. Fondé en 2020 avec une vision claire : offrir des soins de physiothérapie de classe mondiale au Mali.
+                    </p>
+                    <p class="text-large">
+                        Notre centre s'est rapidement imposé comme une référence dans le domaine de la rééducation et du bien-être, situé stratégiquement à Missabougou, à côté de l'hôpital du Mali.
+                    </p>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div class="stat-number">2000+</div>
+                            <div class="stat-label">Patients traités</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Experts qualifiés</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-side">
+                    <div class="image-placeholder">
+                        <i class="fas fa-heart icon-large"></i>
+                        <p>Notre centre moderne</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Valeurs Section -->
+    <section class="section mission-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">
+                    <i class="fas fa-bullseye"></i>
+                    <span>Mission & Valeurs</span>
+                </div>
+                <h2>Notre engagement envers vous</h2>
+            </div>
+
+            <div class="grid-3-cols">
+                <div class="card value-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Bienveillance</h3>
+                    <p>Nous plaçons l'humain au cœur de nos préoccupations avec une approche personnalisée et empathique.</p>
+                </div>
+
+                <div class="card value-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Excellence</h3>
+                    <p>Nous visons l'excellence dans tous nos services avec des équipements de pointe et des techniques modernes.</p>
+                </div>
+
+                <div class="card value-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>Nous adoptons les dernières techniques et technologies pour votre rétablissement optimal.</p>
+                </div>
+            </div>
+
+            <div class="mission-card">
+                <h3>Notre Mission</h3>
+                <p>Donner un coup de main vers une santé optimale en accompagnant chaque patient dans son parcours de guérison avec des soins personnalisés, des techniques innovantes et un suivi attentionné. Nous croyons que chaque personne mérite d'accéder à des soins de qualité dans un environnement bienveillant.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notre Équipe Section -->
+    <section class="section equipe-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">
+                    <i class="fas fa-users"></i>
+                    <span>Notre Équipe</span>
+                </div>
+                <h2>Des professionnels dévoués à votre service</h2>
+                <p class="subtitle">Une équipe de professionnels passionnés, unis par la même mission : vous accompagner vers une santé optimale.</p>
+            </div>
+
+            <div class="team-photo-card">
+                <div class="team-photo-placeholder">
+                    
+                    
+                </div>
+            </div>
+
+            <div class="grid-2-cols mt-4">
+                <div class="card expertise-card">
+                    <h3>Expertise & Expérience</h3>
+                    <ul class="check-list">
+                        <li>
+                            <span class="dot"></span>
+                            <span>Équipe de thérapeutes certifiés et expérimentés</span>
+                        </li>
+                        <li>
+                            <span class="dot"></span>
+                            <span>Formation continue et mise à jour des compétences</span>
+                        </li>
+                        <li>
+                            <span class="dot"></span>
+                            <span>Approche multidisciplinaire pour votre bien-être</span>
+                        </li>
+                        <li>
+                            <span class="dot"></span>
+                            <span>Disponibilité 24h/24 pour les urgences</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card certification-card">
+                    <h3>Certifications</h3>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <span>Ordre des kinésithérapeutes du Mali</span>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <span>Certification qualité ISO</span>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <span>Agréé par le ministère de la Santé</span>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <span>Formation continue certifiée</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vidéo de Prévention Section -->
+    <section class="section video-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">
+                    <i class="fas fa-video"></i>
+                    <span>Prévention & Sensibilisation</span>
+                </div>
+                <h2>Message de notre Directeur</h2>
+                <p class="subtitle">Une présentation importante sur la prévention de l'AVC (Accident Vasculaire Cérébral)</p>
+            </div>
+
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <a href="https://www.facebook.com/share/v/1DaPnrLEbM/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="video-overlay">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </a>
+                    <div class="video-caption">
+                        <p>Cliquez pour voir la vidéo sur Facebook</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-3">
+                <a href="https://www.facebook.com/share/v/1DaPnrLEbM/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                    <i class="fas fa-external-link-alt"></i>
+                    Voir la vidéo complète
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Actualités & Événements Section -->
+    <section class="section news-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">
+                    <i class="fas fa-calendar"></i>
+                    <span>Actualités</span>
+                </div>
+                <h2>Dernières nouvelles de Physio Phelms</h2>
+                <p class="subtitle">Restez informé de nos événements, séminaires et actualités.</p>
+            </div>
+
+            <div class="grid-2-cols">
+                <!-- Séminaire Actuel -->
+                <div class="card event-card active-event">
+                    <div class="card-accent"></div>
+                    <div class="card-content">
+                        <div class="event-badge">Événement en cours</div>
+                        <h3 class="event-title">Séminaire de Formation Continue</h3>
+                        
+                        <p class="event-description">
+                            Rejoignez-nous pour notre prochain séminaire de formation dédié aux professionnels de santé et aux personnes intéressées par la physiothérapie moderne.
+                        </p>
+
+                        <div class="event-details">
+                            <div class="event-detail-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Inscriptions ouvertes maintenant</span>
+                            </div>
+                            <div class="event-detail-item">
+                                <i class="fas fa-users"></i>
+                                <span>Places limitées disponibles</span>
+                            </div>
+                        </div>
+
+                        <a href="https://physiophelms.com/?i=1" target="_blank" rel="noopener noreferrer" class="btn-primary btn-full">
+                            <i class="fas fa-calendar-check"></i>
+                            Cliquez ici...
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- News Card Placeholder -->
+                <div class="card event-card upcoming-event">
+                    <div class="card-accent-muted"></div>
+                    <div class="card-content">
+                        <div class="event-badge-muted">À venir</div>
+                        <h3>Plus d'actualités bientôt</h3>
+                        
+                        <p class="event-description">
+                            Restez connectés pour découvrir nos prochains événements, ateliers et initiatives pour votre bien-être. Suivez-nous sur nos réseaux sociaux pour ne rien manquer.
+                        </p>
+
+                        <button class="btn-secondary btn-full">
+                            Nous suivre
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prêt à commencer votre parcours vers une meilleure santé ?</h2>
+                <p>Rejoignez plus de 2000 patients satisfaits qui nous font confiance pour leur bien-être.</p>
+                <div class="cta-buttons">
+                    <a href="rendez-vous.html" class="btn-secondary-white">Prendre rendez-vous</a>
+                    <a href="contact.html" class="btn-outline-white">Nous contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../imgi_1_497090745_18066544382293413_4831932850810085523_n.jpg" alt="Physio Phelms Logo">
+                        <div class="footer-logo-text">
+                            <h3>Physio Phelms</h3>
+                            <p>Un coup de main vers une santé optimale</p>
+                        </div>
+                    </div>
+                    <p>Votre partenaire santé pour une récupération optimale.</p>
+                    <div class="social-links">
+                        <a href="tel:+22375025959" class="social-link">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="mailto:PhysioPhelms2020@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Nos Services</h3>
+                    <ul>
+                        <li><a href="services.html">Physiothérapie générale</a></li>
+                        <li><a href="services.html">Physiothérapie Gériatrique</a></li>
+                        <li><a href="services.html">Physiothérapie pédiatrique</a></li>
+                        <li><a href="services.html">Physiothérapie neurologique</a></li>
+                        <li><a href="services.html">Physiothérapie sportive</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Liens Rapides</h3>
+                    <ul>
+                        <li><a href="accueil.html">Accueil</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="actualite.html">Actualité</a></li>
+                        <li><a href="rendez-vous.html">Rendez-vous</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>Missabougou à côté de l'hôpital du Mali<br>Bamako, Mali 🇲🇱</div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+223 75 02 59 59</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>PhysioPhelms2020@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2024 Physio Phelms. Tous droits réservés.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="common.js"></script>
+    <script>
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.remove('active');
+        }
+
+        // Fermer le menu mobile si on clique en dehors
+        document.addEventListener('click', function(event) {
+            const mobileNav = document.getElementById('mobileNav');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (!mobileNav.contains(event.target) && !menuBtn.contains(event.target)) {
+                mobileNav.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

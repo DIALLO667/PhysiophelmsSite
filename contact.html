@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Physio Phelms</title>
+       <title>Physio Phelms - Centre de physiothérapie à Bamako</title>
+
     <meta name="description" content="Contactez Physio Phelms à Missabougou, Bamako. Téléphone, email, adresse et horaires d'ouverture.">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="icon" type="image/jpeg" href="public/imgi_1_497090745_18066544382293413_4831932850810085523_n.jpg">
 </head>
 <body>
@@ -14,7 +17,8 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="public/imgi_1_497090745_18066544382293413_4831932850810085523_n.jpg" alt="Physio Phelms Logo" class="logo-img">
+                                       <img src="public/logop.JPG" alt="Physio Phelms Logo" class="logo-img">
+
                     <div class="logo-text">
                         <h1>Physio Phelms</h1>
                         <p>Un coup de main vers une santé optimale</p>
@@ -24,7 +28,7 @@
                 <nav class="nav desktop-nav">
                     <a href="accueil.html">Accueil</a>
                     <a href="services.html">Services</a>
-                    <a href="apropos.html">À propos</a>
+                    <a href="actualite.html">Actualite</a>
                     <a href="rendez-vous.html">Rendez-vous</a>
                     <a href="contact.html" class="active">Contact</a>
                     <a href="rendez-vous.html" class="btn-primary">Prendre RDV</a>
@@ -40,7 +44,7 @@
             <nav class="mobile-nav" id="mobileNav">
                 <a href="accueil.html" onclick="closeMobileMenu()">Accueil</a>
                 <a href="services.html" onclick="closeMobileMenu()">Services</a>
-                <a href="apropos.html" onclick="closeMobileMenu()">À propos</a>
+                <a href="actualite.html" onclick="closeMobileMenu()">Actualite</a>
                 <a href="rendez-vous.html" onclick="closeMobileMenu()">Rendez-vous</a>
                 <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
                 <a href="rendez-vous.html" class="btn-primary" onclick="closeMobileMenu()">Prendre RDV</a>
@@ -101,7 +105,7 @@
                         </div>
                     </div>
                     
-                    <div class="transport-card">
+                    <!-- <div class="transport-card">
                         <h3>Comment nous rejoindre</h3>
                         <div class="transport-item">
                             <span class="transport-icon">🚗</span>
@@ -124,7 +128,7 @@
                                 <p>À côté de l'hôpital du Mali</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     
                     <div class="quick-contact-card">
                         <h3>Contact rapide</h3>
@@ -188,7 +192,7 @@
             </div>
             
             <!-- Contact Form -->
-            <div class="contact-form-section">
+            <!-- <div class="contact-form-section">
                 <div class="section-header">
                     <h2>Envoyez-nous un <span class="gradient-text">message</span></h2>
                     <p>Vous avez une question ? N'hésitez pas à nous écrire, nous vous répondrons rapidement.</p>
@@ -236,7 +240,7 @@
                         <p class="form-note">* Champs obligatoires. Nous vous répondrons sous 24h.</p>
                     </form>
                 </div>
-            </div>
+            </div> -->
             
             <div class="cta-section">
                 <h3>Prêt à commencer votre parcours de guérison ?</h3>
@@ -284,7 +288,7 @@
                     <ul>
                         <li><a href="accueil.html">Accueil</a></li>
                         <li><a href="services.html">Services</a></li>
-                        <li><a href="apropos.html">À propos</a></li>
+                        <li><a href="actualite.html">Actualite</a></li>
                         <li><a href="rendez-vous.html">Rendez-vous</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
@@ -316,6 +320,10 @@
             </div>
         </div>
     </footer>
+         <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
 
     <script src="common.js"></script>
     <script>
