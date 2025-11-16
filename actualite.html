@@ -83,11 +83,11 @@
                     </p>
                     <div class="stats-grid">
                         <div class="stat-box">
-                            <div class="stat-number">2000+</div>
+                            <div class="stat-number">3000+</div>
                             <div class="stat-label">Patients traités</div>
                         </div>
                         <div class="stat-box">
-                            <div class="stat-number">10+</div>
+                            <div class="stat-number">15+</div>
                             <div class="stat-label">Experts qualifiés</div>
                         </div>
                     </div>
@@ -147,80 +147,348 @@
     </section>
 
     <!-- Notre Équipe Section -->
-    <section class="section equipe-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="badge">
-                    <i class="fas fa-users"></i>
-                    <span>Notre Équipe</span>
+      
+
+    <!-- Notre Équipe Section avec Carrousel -->
+<section class="section equipe-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="badge">
+                <i class="fas fa-users"></i>
+                <span>Notre Équipe</span>
+            </div>
+            <h2>Des professionnels dévoués à votre service</h2>
+            <p class="subtitle">Une équipe de professionnels passionnés, unis par la même mission : vous accompagner vers une santé optimale.</p>
+        </div>
+
+        <!-- Carrousel d'équipe -->
+        <div class="team-carousel-container">
+            <div class="team-carousel" id="teamCarousel">
+                
+                <!-- Slide 1 : Photo d'équipe complète -->
+                <div class="team-slide team-photo-slide">
+                    <div class="team-photo-wrapper">
+                        <div class="team-photo-placeholder">
+                            <!-- Votre image d'équipe existante s'affiche ici via CSS -->
+                        </div>
+                    </div>
                 </div>
-                <h2>Des professionnels dévoués à votre service</h2>
-                <p class="subtitle">Une équipe de professionnels passionnés, unis par la même mission : vous accompagner vers une santé optimale.</p>
+
+                <!-- Slide 2 : Membre 1 -->
+                <div class="team-slide">
+                    <div class="member-photo">
+                        <div class="member-photo-img">
+                            <img src="public/employe5.jpeg" alt="Dr. Mamadou Konaté">
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Dr. Mamadou Konaté</h3>
+                        <p class="member-title">Expert en Physiothérapie Générale</p>
+                        <div class="member-experience">
+                            <i class="fas fa-award"></i>
+                            <span>+6 ans d'expérience</span>
+                        </div>
+                        <p class="member-description">
+                            Spécialiste reconnu en rééducation fonctionnelle et thérapie manuelle. 
+                            Diplômé de l'Institut Supérieur de Santé, Dr. Konaté apporte son expertise 
+                            dans le traitement des douleurs chroniques et la récupération post-traumatique.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Slide 3 : Membre 2 -->
+                <div class="team-slide">
+                    <div class="member-photo">
+                        <div class="member-photo-img">
+                            <img src="public/employe3.jpeg" alt="Aminata Traoré">
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Aminata Traoré</h3>
+                        <p class="member-title">Experte en Physiothérapie Pédiatrique</p>
+                        <div class="member-experience">
+                            <i class="fas fa-award"></i>
+                            <span>+4 ans d'expérience</span>
+                        </div>
+                        <p class="member-description">
+                            Passionnée par le développement moteur de l'enfant, Aminata se spécialise 
+                            dans les troubles neurologiques et orthopédiques pédiatriques. Son approche 
+                            douce et ludique permet aux jeunes patients de progresser dans un environnement rassurant.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Slide 4 : Membre 3 -->
+                <div class="team-slide">
+                    <div class="member-photo">
+                        <div class="member-photo-img">
+                            <img src="public/employe1.jpeg" alt="Ibrahim Diallo">
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Ibrahim Diallo</h3>
+                        <p class="member-title">Expert en Physiothérapie Sportive</p>
+                        <div class="member-experience">
+                            <i class="fas fa-award"></i>
+                            <span>+5 ans d'expérience</span>
+                        </div>
+                        <p class="member-description">
+                            Ancien kinésithérapeute d'équipes sportives professionnelles, Ibrahim excelle 
+                            dans la prévention des blessures et l'optimisation des performances athlétiques. 
+                            Il accompagne aussi bien les sportifs de haut niveau que les amateurs.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Slide 5 : Membre 4 -->
+                <div class="team-slide">
+                    <div class="member-photo">
+                        <div class="member-photo-img">
+                            <img src="public/employe4.jpeg" alt="Fatoumata Sidibé">
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3 class="member-name">Fatoumata Sidibé</h3>
+                        <p class="member-title">Experte en Physiothérapie Neurologique</p>
+                        <div class="member-experience">
+                            <i class="fas fa-award"></i>
+                            <span>+7 ans d'expérience</span>
+                        </div>
+                        <p class="member-description">
+                            Spécialisée dans la rééducation neurologique, Fatoumata accompagne les patients 
+                            souffrant d'AVC, de traumatismes crâniens ou de maladies neurodégénératives. 
+                            Sa patience et son expertise offrent un espoir de récupération à ses patients.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Contrôles du carrousel -->
+        <div class="carousel-controls">
+            <button class="carousel-button" id="prevBtn" onclick="moveCarousel(-1)" aria-label="Précédent">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <div class="carousel-dots" id="carouselDots"></div>
+            
+            <button class="carousel-button" id="nextBtn" onclick="moveCarousel(1)" aria-label="Suivant">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Section Expertise (conservée) -->
+        <div class="grid-2-cols mt-4">
+            <div class="card expertise-card">
+                <h3>Expertise & Expérience</h3>
+                <ul class="check-list">
+                    <li>
+                        <span class="dot"></span>
+                        <span>Équipe de thérapeutes certifiés et expérimentés</span>
+                    </li>
+                    <li>
+                        <span class="dot"></span>
+                        <span>Formation continue et mise à jour des compétences</span>
+                    </li>
+                    <li>
+                        <span class="dot"></span>
+                        <span>Approche multidisciplinaire pour votre bien-être</span>
+                    </li>
+                    <li>
+                        <span class="dot"></span>
+                        <span>Disponibilité 24h/24 pour les urgences</span>
+                    </li>
+                </ul>
             </div>
 
-            <div class="team-photo-card">
-                <div class="team-photo-placeholder">
-                    
-                    
-                </div>
-            </div>
-
-            <div class="grid-2-cols mt-4">
-                <div class="card expertise-card">
-                    <h3>Expertise & Expérience</h3>
-                    <ul class="check-list">
-                        <li>
-                            <span class="dot"></span>
-                            <span>Équipe de thérapeutes certifiés et expérimentés</span>
-                        </li>
-                        <li>
-                            <span class="dot"></span>
-                            <span>Formation continue et mise à jour des compétences</span>
-                        </li>
-                        <li>
-                            <span class="dot"></span>
-                            <span>Approche multidisciplinaire pour votre bien-être</span>
-                        </li>
-                        <li>
-                            <span class="dot"></span>
-                            <span>Disponibilité 24h/24 pour les urgences</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="card certification-card">
-                    <h3>Certifications</h3>
-                    <div class="cert-list">
-                        <div class="cert-item">
-                            <div class="cert-icon">
-                                <i class="fas fa-award"></i>
-                            </div>
-                            <span>Ordre des kinésithérapeutes du Mali</span>
+            <div class="card certification-card">
+                <h3>Certifications</h3>
+                <div class="cert-list">
+                    <div class="cert-item">
+                        <div class="cert-icon">
+                            <i class="fas fa-award"></i>
                         </div>
-                        <div class="cert-item">
-                            <div class="cert-icon">
-                                <i class="fas fa-award"></i>
-                            </div>
-                            <span>Certification qualité ISO</span>
+                        <span>Association des kinésithérapeutes du Mali</span>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-icon">
+                            <i class="fas fa-award"></i>
                         </div>
-                        <div class="cert-item">
-                            <div class="cert-icon">
-                                <i class="fas fa-award"></i>
-                            </div>
-                            <span>Agréé par le ministère de la Santé</span>
+                        <span>Ordre des physiothérapeutes du Venezuela</span>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-icon">
+                            <i class="fas fa-award"></i>
                         </div>
-                        <div class="cert-item">
-                            <div class="cert-icon">
-                                <i class="fas fa-award"></i>
-                            </div>
-                            <span>Formation continue certifiée</span>
+                        <span>Agréé par le ministère de la Santé</span>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-icon">
+                            <i class="fas fa-award"></i>
                         </div>
+                        <span>Formation continue certifiée</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
+<!-- Section Témoignages Vidéo -->
+<section class="section testimonials-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="badge">
+                <i class="fas fa-video"></i>
+                <span>Témoignages</span>
+            </div>
+            <h2>Ce que disent nos patients</h2>
+            <p class="subtitle">Découvrez les histoires inspirantes de nos patients qui ont retrouvé leur bien-être grâce à nos soins.</p>
+        </div>
+
+        <div class="testimonials-grid">
+            
+            <!-- Témoignage Vidéo 1 -->
+            <div class="testimonial-video-card">
+                <video class="testimonial-video" controls controlsList="nodownload">
+                    <source src="public/video.MOV" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
+                <div class="video-info">
+                    <h3>Récupération après AVC</h3>
+                    <p><i class="fas fa-user"></i> Témoignage de M. Sangaré</p>
+                </div>
+            </div>
+
+            <!-- Témoignage Vidéo 2 -->
+            <div class="testimonial-video-card">
+                <video class="testimonial-video" controls controlsList="nodownload">
+                    <source src="public/video2.MOV" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
+                <div class="video-info">
+                    <h3>Rééducation sportive</h3>
+                    <p><i class="fas fa-user"></i> Témoignage d'Awa Coulibaly</p>
+                </div>
+            </div>
+
+            <!-- Témoignage Vidéo 3 -->
+            <div class="testimonial-video-card">
+                <video class="testimonial-video" controls controlsList="nodownload">
+                    <source src="public/video3.MOV" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
+                <div class="video-info">
+                    <h3>Soulagement des douleurs</h3>
+                    <p><i class="fas fa-user"></i> Témoignage de Mme Touré</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<br>
+<script>
+// ===== CARROUSEL D'ÉQUIPE AMÉLIORÉ =====
+let currentSlide = 0;
+const carousel = document.getElementById('teamCarousel');
+const slides = carousel.querySelectorAll('.team-slide');
+const dotsContainer = document.getElementById('carouselDots');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+// Créer les indicateurs (dots)
+slides.forEach((_, index) => {
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot';
+    dot.setAttribute('aria-label', `Aller à la slide ${index + 1}`);
+    if (index === 0) dot.classList.add('active');
+    dot.onclick = () => goToSlide(index);
+    dotsContainer.appendChild(dot);
+});
+
+const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+function updateCarousel() {
+    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+    
+    // Mettre à jour les dots
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+    });
+
+    // Les boutons ne sont jamais désactivés maintenant (boucle infinie)
+    prevBtn.disabled = false;
+    nextBtn.disabled = false;
+}
+
+function moveCarousel(direction) {
+    currentSlide += direction;
+    
+    // Boucle infinie : retour au début ou à la fin
+    if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+    } else if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
+    updateCarousel();
+}
+
+function goToSlide(index) {
+    currentSlide = index;
+    updateCarousel();
+}
+
+// Auto-play avec boucle infinie
+let autoPlayInterval = setInterval(() => {
+    moveCarousel(1);
+}, 5000);
+
+// Pause auto-play au survol
+carousel.addEventListener('mouseenter', () => {
+    clearInterval(autoPlayInterval);
+});
+
+carousel.addEventListener('mouseleave', () => {
+    autoPlayInterval = setInterval(() => {
+        moveCarousel(1);
+    }, 5000);
+});
+
+// Support tactile pour mobile
+let touchStartX = 0;
+let touchEndX = 0;
+
+carousel.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+carousel.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    if (touchStartX - touchEndX > 50) {
+        moveCarousel(1);
+    }
+    if (touchEndX - touchStartX > 50) {
+        moveCarousel(-1);
+    }
+}
+
+// Support clavier
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+        moveCarousel(-1);
+    } else if (e.key === 'ArrowRight') {
+        moveCarousel(1);
+    }
+});
+
+</script>
     <!-- Vidéo de Prévention Section -->
     <section class="section video-section">
         <div class="container">
@@ -323,7 +591,7 @@
         <div class="container">
             <div class="cta-content">
                 <h2>Prêt à commencer votre parcours vers une meilleure santé ?</h2>
-                <p>Rejoignez plus de 2000 patients satisfaits qui nous font confiance pour leur bien-être.</p>
+                <p>Rejoignez plus de 3000 patients satisfaits qui nous font confiance pour leur bien-être.</p>
                 <div class="cta-buttons">
                     <a href="rendez-vous.html" class="btn-secondary-white">Prendre rendez-vous</a>
                     <a href="contact.html" class="btn-outline-white">Nous contacter</a>
@@ -338,7 +606,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="../imgi_1_497090745_18066544382293413_4831932850810085523_n.jpg" alt="Physio Phelms Logo">
+                        <img src="public/logop.JPG" alt="Physio Phelms Logo">
                         <div class="footer-logo-text">
                             <h3>Physio Phelms</h3>
                             <p>Un coup de main vers une santé optimale</p>

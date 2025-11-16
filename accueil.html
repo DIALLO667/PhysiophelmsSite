@@ -53,7 +53,7 @@
                     <span></span>
                 </button>
             </div>
-            
+
             <nav class="mobile-nav" id="mobileNav">
                 <a href="accueil.html" onclick="closeMobileMenu()">Accueil</a>
                 <a href="services.html" onclick="closeMobileMenu()">Services</a>
@@ -63,7 +63,7 @@
                 <a href="rendez-vous.html" class="btn-primary" onclick="closeMobileMenu()">Prendre RDV</a>
             </nav>
         </div>
-       
+
     </header>
 
     <!-- Hero Section -->
@@ -84,12 +84,12 @@
                     <div class="stats">
     <div class="stat">
         <div class="stat-icon"><i class="fas fa-users"></i></div>
-        <div class="stat-number">2000+</div>
+        <div class="stat-number">3000+</div>
         <div class="stat-label">Patients satisfaits</div>
     </div>
     <div class="stat">
         <div class="stat-icon"><i class="fas fa-award"></i></div>
-        <div class="stat-number">15+</div>
+        <div class="stat-number">6+</div>
         <div class="stat-label">Années d'expérience</div>
     </div>
     <div class="stat">
@@ -136,7 +136,7 @@
                 </div>
                 
                 <div class="service-card">
-                    <img src="public/imgi_30_469468594_18050453231293413_7213971266497959601_n.jpg" alt="Physiothérapie sportive">
+                    <img src="public/sport.jpeg" alt="Physiothérapie sportive">
                     <div class="service-content">
                         <div class="service-icon"><i class="fas fa-running"></i></div>
                         <h3>Physiothérapie sportive</h3>
@@ -280,5 +280,22 @@
 
 
     <script src="common.js"></script>
+    <script>
+const images = [
+  'public/acc1.jpeg',
+  'public/boss2.jpeg',
+  'public/respiratoire.jpeg',
+
+
+  
+];
+
+let index = 0;
+setInterval(() => {
+  index = (index + 1) % images.length;
+  document.querySelector('.hero').style.backgroundImage = `url('${images[index]}')`;
+}, 4300);
+</script>
+
 </body>
 </html>

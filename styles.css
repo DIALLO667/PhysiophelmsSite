@@ -226,7 +226,11 @@ p {
 .hero {
   position: relative;
   padding: 120px 0 80px;
-  background: url('public/boss2.jpeg') no-repeat center center/cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+  /* background: url('public/boss2.jpeg') no-repeat center center/cover; */
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -244,7 +248,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.50); /* ajuste ici l’intensité */
+  background: rgba(0, 0, 0, 0.60); /* ajuste ici l’intensité */
   z-index: 1;
 }
 
