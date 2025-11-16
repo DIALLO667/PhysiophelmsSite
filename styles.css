@@ -199,6 +199,31 @@ p {
 .mobile-nav.active {
     display: flex;
 }
+.mobile-nav a {
+    color: #000000 !important;  /* Noir au lieu de bleu */
+    text-decoration: none !important;  /* Enlève le soulignement */
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+     position: relative;
+}
+
+.mobile-nav a:hover,
+.mobile-nav a.active {
+    color: #10b981 !important;  /* Vert au hover */
+}
+
+.mobile-nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #10b981;
+    border-radius: 1px;
+    display: block !important;  /* Force l'affichage */
+}
 
 
 /* Page Header */
@@ -230,7 +255,6 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   transition: background-image 1s ease-in-out;
-  /* background: url('public/boss2.jpeg') no-repeat center center/cover; */
   min-height: 100vh;
   display: flex;
   align-items: center;

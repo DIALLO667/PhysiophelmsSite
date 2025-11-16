@@ -55,7 +55,7 @@
             </div>
 
             <nav class="mobile-nav" id="mobileNav">
-                <a href="accueil.html" onclick="closeMobileMenu()">Accueil</a>
+                <a href="accueil.html" class="active" onclick="closeMobileMenu()">Accueil</a>
                 <a href="services.html" onclick="closeMobileMenu()">Services</a>
                 <a href="actualite.html" onclick="closeMobileMenu()">Actualite</a>
                 <a href="rendez-vous.html" onclick="closeMobileMenu()">Rendez-vous</a>
@@ -280,7 +280,7 @@
 
 
     <script src="common.js"></script>
-    <script>
+    <!-- <script>
 const images = [
   'public/acc1.jpeg',
   'public/boss2.jpeg',
@@ -295,7 +295,31 @@ setInterval(() => {
   index = (index + 1) % images.length;
   document.querySelector('.hero').style.backgroundImage = `url('${images[index]}')`;
 }, 4300);
-</script>
+</script> -->
+<script>
+const images = [
+  'public/boss2.jpeg',
+  'public/acc1.jpeg',
+  'public/respiratoire.jpeg',
+];
 
+const heroSection = document.querySelector('.hero');
+let index = 0;
+
+// Précharger toutes les images pour éviter les saccades
+images.forEach(src => {
+  const img = new Image();
+  img.src = src;
+});
+
+// Définir la première image immédiatement
+heroSection.style.backgroundImage = `url('${images[0]}')`;
+
+// Commencer le défilement
+setInterval(() => {
+  index = (index + 1) % images.length;
+  heroSection.style.backgroundImage = `url('${images[index]}')`;
+}, 4300);
+</script>
 </body>
 </html>

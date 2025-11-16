@@ -178,7 +178,30 @@ p { margin-bottom: 1rem; }
 .mobile-nav.active {
     display: flex;
 }
+.mobile-nav a {
+    color: #000000 !important;  /* Noir au lieu de bleu */
+    text-decoration: none !important;  /* Enlève le soulignement */
+    font-weight: 500;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+    position: relative;
+}
 
+.mobile-nav a:hover,.mobile-nav a.active {
+    color: #10b981 !important;  /* ✅ Texte en vert */
+    font-weight: 600 !important;  /* Un peu plus gras */
+}
+
+.mobile-nav a.active::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 2px !important;  /* Trait fin */
+    background: #10b981 !important;
+    border-radius: 2px !important;
+}
 /* Hero Section */
 .hero-section {
     position: relative;
@@ -434,7 +457,15 @@ p { margin-bottom: 1rem; }
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    animation: fadeFirst 1s ease-out;
 }
+
+@keyframes fadeFirst {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+
 
 
 /* Lists */
@@ -599,7 +630,7 @@ p { margin-bottom: 1rem; }
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top; /* Pour mieux cadrer le visage */
+    object-position: center 20%; /* Pour mieux cadrer le visage */
 }
 
 .member-photo-img i {
@@ -650,12 +681,86 @@ p { margin-bottom: 1rem; }
 }
 
 /* Contrôles du carrousel */
+.team-carousel-container {
+    position: relative; /* IMPORTANT pour position absolute des flèches */
+}
+
 .carousel-controls {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
     margin-top: 2rem;
+     position: relative;
+    z-index: 20;
+}
+
+
+/* Position absolute des boutons (gauche / droite), légèrement vers le haut */
+#prevBtn,
+#nextBtn {
+    position: absolute;
+    top: 45%; /* un peu en haut du centre */
+    transform: translateY(-45%); /* ajustement fin */
+    z-index: 30;
+    background: var(--primary);
+    color: white;
+    border: none;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+/* Conserves les styles existants (hover, taille, etc.) */
+#prevBtn:hover,
+#nextBtn:hover {
+    background: var(--primary-glow);
+    transform: translateY(-45%) scale(1.06);
+    box-shadow: var(--shadow-glow);
+}
+
+/* Décalage horizontal */
+#prevBtn { left: 12px; }   /* à gauche */
+#nextBtn { right: 12px; }  /* à droite */
+
+/* Icoms */
+#prevBtn i, #nextBtn i {
+    font-size: 1.15rem;
+}
+
+/* Rendre accessible (focus) */
+#prevBtn:focus, #nextBtn:focus {
+    outline: 3px solid rgba(16,185,129,0.18);
+    outline-offset: 3px;
+}
+
+/* Responsive : réduire la taille sur petit écran et rapprocher */
+@media (max-width: 768px) {
+    #prevBtn, #nextBtn {
+        width: 44px;
+        height: 44px;
+        top: 42%;
+        transform: translateY(-42%);
+    }
+    #prevBtn { left: 8px; }
+    #nextBtn { right: 8px; }
+}
+
+/* Optionnel : cacher les flèches si tu veux (ex: small screens) 
+@media (max-width: 420px) {
+    #prevBtn, #nextBtn { display: none; }
+}
+*/
+
+/* Petit ajustement pour que les dots restent au-dessus de l'image */
+.carousel-dots {
+    z-index: 25;
 }
 
 .carousel-button {
@@ -1282,4 +1387,30 @@ p { margin-bottom: 1rem; }
     .footer-content {
         grid-template-columns: 1fr;
     }
+}
+/* ===== POSITION DES FLÈCHES SUR LES CÔTÉS ===== */
+.side-controls {
+    position: relative;
+    width: 100%;
+}
+
+.side-controls .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Flèche gauche */
+#prevBtn {
+    left: 10px;
+}
+
+/* Flèche droite */
+#nextBtn {
+    right: 10px;
+}
+
+/* On enlève l'espace inutile */
+.carousel-controls {
+    margin-top: 0 !important;
 }
