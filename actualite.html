@@ -160,7 +160,7 @@
         </div>
 
         <!-- Carrousel d'équipe -->
-        <div class="team-carousel-container">
+        <div class="team-carousel-container controls-inside">
             <div class="team-carousel" id="teamCarousel">
                 
                 <!-- Slide 1 : Photo d'équipe complète -->
@@ -539,7 +539,7 @@
             <!-- Témoignage Vidéo 1 -->
             <div class="testimonial-video-card">
                 <video class="testimonial-video" controls controlsList="nodownload">
-                    <source src="public/video.MOV" type="video/mp4">
+                    <source src="public/video.mp4" type="video/mp4">
                     Votre navigateur ne supporte pas la lecture de vidéos.
                 </video>
                 <div class="video-info">
@@ -551,7 +551,7 @@
             <!-- Témoignage Vidéo 2 -->
             <div class="testimonial-video-card">
                 <video class="testimonial-video" controls controlsList="nodownload">
-                    <source src="public/video2.MOV" type="video/mp4">
+                    <source src="public/video2.mp4" type="video/mp4">
                     Votre navigateur ne supporte pas la lecture de vidéos.
                 </video>
                 <div class="video-info">
@@ -563,7 +563,7 @@
             <!-- Témoignage Vidéo 3 -->
             <div class="testimonial-video-card">
                 <video class="testimonial-video" controls controlsList="nodownload">
-                    <source src="public/video3.MOV" type="video/mp4">
+                    <source src="public/video3.mp4" type="video/mp4">
                     Votre navigateur ne supporte pas la lecture de vidéos.
                 </video>
                 <div class="video-info">
@@ -928,6 +928,29 @@
             
             if (!mobileNav.contains(event.target) && !menuBtn.contains(event.target)) {
                 mobileNav.classList.remove('active');
+            }
+        });
+    </script>
+      <script>
+        const carousel = document.getElementById("teamCarousel");
+
+        let startX = 0;
+        let endX = 0;
+
+        carousel.addEventListener("touchstart", (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        carousel.addEventListener("touchend", (e) => {
+            endX = e.changedTouches[0].clientX;
+
+            // Detection du swipe
+            if (startX - endX > 50) {
+                // Swipe gauche -> slide suivante
+                moveCarousel(1);
+            } else if (endX - startX > 50) {
+                // Swipe droite -> slide précédente
+                moveCarousel(-1);
             }
         });
     </script>

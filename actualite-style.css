@@ -1414,3 +1414,30 @@ p { margin-bottom: 1rem; }
 .carousel-controls {
     margin-top: 0 !important;
 }
+
+/* Positionner les flèches à l'intérieur du carrousel, alignées avec .member-name */
+.controls-inside {
+    position: relative;
+}
+
+.controls-inside .carousel-button {
+    position: absolute;
+    top: 55%; /* 👉 ajuste ici si tu veux monter/descendre les flèches */
+    transform: translateY(-50%);
+    z-index: 20;
+    background: white;
+    box-shadow: var(--shadow-soft);
+}
+
+.controls-inside #prevBtn {
+    left: -40px; /* 👉 place-la plus à gauche ou plus proche */
+}
+
+.controls-inside #nextBtn {
+    right: -40px; /* 👉 place-la plus à droite ou plus proche */
+}
+
+/* Masque les flèches d’origine si nécessaires */
+.side-controls {
+    position: relative;
+}
