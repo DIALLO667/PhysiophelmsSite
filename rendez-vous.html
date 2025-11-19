@@ -118,7 +118,7 @@
                     <input type="hidden" name="_template" value="table">
                     <input type="text" name="_honey" style="display:none">
                     <!-- Retour à la même page après envoi -->
-                    <input type="hidden" name="_next" value="https://monsite.netlify.app/rendez-vous.html#success">
+                    <input type="hidden" name="_next" value="https://physiophelms.netlify.app/rendez-vous.html?submitted=true">
                     
                     
                     <div class="form-row">
@@ -409,5 +409,21 @@
             dateInput.min = tomorrow.toISOString().split('T')[0];
         });
     </script>
+    <script>
+// Vérifie si l'utilisateur vient de soumettre le formulaire
+if (window.location.search.includes('submitted=true')) {
+    // Déclenchez votre popup ici
+    // Si vous avez déjà un popup, appelez-le ici
+    
+    // Exemple avec alert simple :
+    alert('✅ Votre demande a été envoyée avec succès ! Nous vous contacterons sous 24h.');
+    
+    // OU si vous avez un popup personnalisé (remplacez par votre code) :
+    // document.getElementById('success-popup').style.display = 'block';
+    
+    // Nettoie l'URL (enlève le ?submitted=true) pour éviter que le popup se réaffiche si on recharge
+    window.history.replaceState({}, document.title, window.location.pathname);
+}
+</script>
 </body>
 </html>
