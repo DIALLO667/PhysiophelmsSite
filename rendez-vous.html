@@ -102,173 +102,164 @@
     </section>
 
     <!-- Appointment Section -->
-    <section class="appointment">
-        <div class="container">
-            <div class="appointment-content">
-                <div class="appointment-form">
-                    <div class="form-header">
-                        <h3>Formulaire de rendez-vous</h3>
-                        <p>Remplissez ce formulaire et nous vous contacterons sous 24h pour confirmer votre rendez-vous.</p>
-                    </div>
-                    
-                    <form id="appointmentForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName">👤 Prénom *</label>
-                                <input type="text" id="firstName" name="firstName" required placeholder="Votre prénom">
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName">Nom *</label>
-                                <input type="text" id="lastName" name="lastName" required placeholder="Votre nom">
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">📧 Email </label>
-                                <input type="email" id="email" name="email"  placeholder="votre@email.com">
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">📞 Téléphone *</label>
-                                <input type="tel" id="phone" name="phone" required placeholder="+223 75 02 59 59">
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="service">Service souhaité *</label>
-                            <select id="service" name="service" required>
-                                <option value="">Sélectionnez un service</option>
-                                <option value="Physiothérapie générale">Physiothérapie générale</option>
-                                <option value="Physiothérapie Gériatrique">Physiothérapie Gériatrique</option>
-                                <option value="Physiothérapie pédiatrique">Physiothérapie pédiatrique</option>
-                                <option value="Physiothérapie neurologique">Physiothérapie neurologique</option>
-                                <option value="Physiothérapie respiratoire">Physiothérapie respiratoire</option>
-                                <option value="Physiothérapie obstétricale">Physiothérapie obstétricale</option>
-                                <option value="Physiothérapie sportive">Physiothérapie sportive</option>
-                                <option value="Activité physique adaptée">Activité physique adaptée</option>
-                                <option value="Massage thérapeutique">Massage thérapeutique</option>
-                                <option value="Consultation générale">Consultation générale</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="date">📅 Date souhaitée *</label>
-                                <input type="date" id="date" name="date" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="time">🕐 Heure souhaitée *</label>
-                                <select id="time" name="time" required>
-                                    <option value="">Sélectionnez une heure</option>
-                                    <option value="08:00">08:00</option>
-                                    <option value="08:30">08:30</option>
-                                    <option value="09:00">09:00</option>
-                                    <option value="09:30">09:30</option>
-                                    <option value="10:00">10:00</option>
-                                    <option value="10:30">10:30</option>
-                                    <option value="11:00">11:00</option>
-                                    <option value="11:30">11:30</option>
-                                    <option value="14:00">14:00</option>
-                                    <option value="14:30">14:30</option>
-                                    <option value="15:00">15:00</option>
-                                    <option value="15:30">15:30</option>
-                                    <option value="16:00">16:00</option>
-                                    <option value="16:30">16:30</option>
-                                    <option value="17:00">17:00</option>
-                                    <option value="17:30">17:30</option>
-                                </select>
-                            </div>
-                        </div>
-                        
-                        <!-- <div class="form-group">
-                            <label for="urgency">Niveau d'urgence</label>
-                            <select id="urgency" name="urgency">
-                                <option value="normal">Normal</option>
-                                <option value="urgent">Urgent</option>
-                                <option value="tres-urgent">Très urgent</option>
-                            </select>
-                        </div> -->
-                        
-                        <div class="form-group">
-                            <label for="message">💬 Message (optionnel)</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Entrez votre message..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn-primary btn-full">Demander un rendez-vous</button>
-                        
-                        <p class="form-note">* Champs obligatoires. Nous vous contacterons sous 24h pour confirmer votre rendez-vous.</p>
-                    </form>
+ <section class="appointment">
+    <div class="container">
+        <div class="appointment-content">
+            <div class="appointment-form">
+                <div class="form-header">
+                    <h3>Formulaire de rendez-vous</h3>
+                    <p>Remplissez ce formulaire et nous vous contacterons sous 24h pour confirmer votre rendez-vous.</p>
                 </div>
                 
-                <div class="appointment-info">
-                    <div class="info-card">
-                        <h3>Informations pratiques</h3>
-                        
-                        <div class="info-item">
-                            <div class="info-icon">🕐</div>
-                            <div class="info-content">
-                                <h4>Horaires d'ouverture</h4>
-                                <p>Lundi - Vendredi : 8h00 - 18h00<br>
-                                Samedi : 8h00 - 13h00<br>
-                                Dimanche : Sous RDV!</p>
-                            </div>
+                <form action="https://formsubmit.co/ad769070@gmail.com" method="POST">
+                    <!-- Configuration FormSubmit -->
+                    <input type="hidden" name="_subject" value="🏥 Nouvelle demande de rendez-vous - PhysioPhelms">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none">
+                    <!-- Retour à la même page après envoi -->
+                    <input type="hidden" name="_next" value="https://monsite.netlify.app/rendez-vous.html#success">
+                    
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">👤 Prénom *</label>
+                            <input type="text" name="firstName" required placeholder="Votre prénom">
                         </div>
-                        
-                        <div class="info-item">
-                            <div class="info-icon">📅</div>
-                            <div class="info-content">
-                                <h4>Délai de réponse</h4>
-                                <p>Nous vous contacterons sous 24h pour confirmer votre rendez-vous et ajuster si nécessaire la date ou l'heure.</p>
-                            </div>
+                        <div class="form-group">
+                            <label for="lastName">Nom *</label>
+                            <input type="text" name="lastName" required placeholder="Votre nom">
                         </div>
-                        
-                        <div class="info-item">
-                            <div class="info-icon">👤</div>
-                            <div class="info-content">
-                                <h4>Première consultation</h4>
-                                <p>Votre première consultation comprend un bilan complet et l'établissement de votre plan de traitement personnalisé.</p>
-                            </div>
-                        </div>
-                        
-                        <!-- <div class="info-item">
-                            <div class="info-icon">💰</div>
-                            <div class="info-content">
-                                <h4>Consultation gratuite</h4>
-                                <p>Votre première consultation d'évaluation est entièrement gratuite, sans engagement.</p>
-                            </div>
-                        </div> -->
                     </div>
                     
-                    <div class="help-card">
-                        <h3>Besoin d'aide ?</h3>
-                        <p>Notre équipe est disponible pour répondre à toutes vos questions et vous aider à choisir le service le plus adapté à vos besoins.</p>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <span class="contact-icon">📞</span>
-                                <span>+223 75 02 59 59</span>
-                            </div>
-                            <div class="contact-item">
-                                <span class="contact-icon">📧</span>
-                                <span>PhysioPhelms2020@gmail.com</span>
-                            </div>
-                            <div class="contact-item">
-                                <span class="contact-icon">📍</span>
-                                <span>Missabougou, Bamako</span>
-                            </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">📧 Email </label>
+                            <input type="email" name="email" placeholder="votre@email.com">
                         </div>
-                        <a href="contact.html" class="btn-secondary btn-full">Nous contacter</a>
+                        <div class="form-group">
+                            <label for="phone">📞 Téléphone *</label>
+                            <input type="tel" name="phone" required placeholder="+223 75 02 59 59">
+                        </div>
                     </div>
                     
-                    <div class="emergency-card">
-                        <h3>🚨 Urgences</h3>
-                        <p>Pour les urgences médicales, contactez-nous immédiatement. Nous sommes disponibles 24h/24.</p>
-                        <a href="tel:+22375025959" class="btn-primary btn-full">Appeler maintenant</a>
+                    <div class="form-group">
+                        <label for="service">Service souhaité *</label>
+                        <select name="service" required>
+                            <option value="">Sélectionnez un service</option>
+                            <option value="Physiothérapie générale">Physiothérapie générale</option>
+                            <option value="Physiothérapie Gériatrique">Physiothérapie Gériatrique</option>
+                            <option value="Physiothérapie pédiatrique">Physiothérapie pédiatrique</option>
+                            <option value="Physiothérapie neurologique">Physiothérapie neurologique</option>
+                            <option value="Physiothérapie respiratoire">Physiothérapie respiratoire</option>
+                            <option value="Physiothérapie obstétricale">Physiothérapie obstétricale</option>
+                            <option value="Physiothérapie sportive">Physiothérapie sportive</option>
+                            <option value="Activité physique adaptée">Activité physique adaptée</option>
+                            <option value="Massage thérapeutique">Massage thérapeutique</option>
+                            <option value="Consultation générale">Consultation générale</option>
+                        </select>
                     </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">📅 Date souhaitée *</label>
+                            <input type="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">🕐 Heure souhaitée *</label>
+                            <select name="time" required>
+                                <option value="">Sélectionnez une heure</option>
+                                <option value="08:00">08:00</option>
+                                <option value="08:30">08:30</option>
+                                <option value="09:00">09:00</option>
+                                <option value="09:30">09:30</option>
+                                <option value="10:00">10:00</option>
+                                <option value="10:30">10:30</option>
+                                <option value="11:00">11:00</option>
+                                <option value="11:30">11:30</option>
+                                <option value="14:00">14:00</option>
+                                <option value="14:30">14:30</option>
+                                <option value="15:00">15:00</option>
+                                <option value="15:30">15:30</option>
+                                <option value="16:00">16:00</option>
+                                <option value="16:30">16:30</option>
+                                <option value="17:00">17:00</option>
+                                <option value="17:30">17:30</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">💬 Message (optionnel)</label>
+                        <textarea name="message" rows="4" placeholder="Entrez votre message..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary btn-full">Demander un rendez-vous</button>
+                    
+                    <p class="form-note">* Champs obligatoires. Nous vous contacterons sous 24h pour confirmer votre rendez-vous.</p>
+                </form>
+            </div>
+            
+            <div class="appointment-info">
+                <div class="info-card">
+                    <h3>Informations pratiques</h3>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">🕐</div>
+                        <div class="info-content">
+                            <h4>Horaires d'ouverture</h4>
+                            <p>Lundi - Vendredi : 8h00 - 18h00<br>
+                            Samedi : 8h00 - 13h00<br>
+                            Dimanche : Sous RDV!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">📅</div>
+                        <div class="info-content">
+                            <h4>Délai de réponse</h4>
+                            <p>Nous vous contacterons sous 24h pour confirmer votre rendez-vous et ajuster si nécessaire la date ou l'heure.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">👤</div>
+                        <div class="info-content">
+                            <h4>Première consultation</h4>
+                            <p>Votre première consultation comprend un bilan complet et l'établissement de votre plan de traitement personnalisé.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="help-card">
+                    <h3>Besoin d'aide ?</h3>
+                    <p>Notre équipe est disponible pour répondre à toutes vos questions et vous aider à choisir le service le plus adapté à vos besoins.</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>+223 75 02 59 59</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span>PhysioPhelms2020@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>Missabougou, Bamako</span>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn-secondary btn-full">Nous contacter</a>
+                </div>
+                
+                <div class="emergency-card">
+                    <h3>🚨 Urgences</h3>
+                    <p>Pour les urgences médicales, contactez-nous immédiatement. Nous sommes disponibles 24h/24.</p>
+                    <a href="tel:+22375025959" class="btn-primary btn-full">Appeler maintenant</a>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
    
     <!-- Footer -->
     <footer class="footer">
