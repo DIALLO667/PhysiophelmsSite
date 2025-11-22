@@ -111,7 +111,7 @@
                     <p>Remplissez ce formulaire et nous vous contacterons sous 24h pour confirmer votre rendez-vous.</p>
                 </div>
                 
-                <form action="https://formsubmit.co/ad769070@gmail.com" method="POST">
+                <form id="appointmentForm" action="https://formsubmit.co/ad769070@gmail.com" method="POST">
                     <!-- Configuration FormSubmit -->
                     <input type="hidden" name="_subject" value="🏥 Nouvelle demande de rendez-vous - PhysioPhelms">
                     <input type="hidden" name="_captcha" value="false">
@@ -124,22 +124,22 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="firstName">👤 Prénom *</label>
-                            <input type="text" name="firstName" required placeholder="Votre prénom">
+                            <input type="text" name="firstName" id="firstName" required placeholder="Votre prénom">
                         </div>
                         <div class="form-group">
                             <label for="lastName">Nom *</label>
-                            <input type="text" name="lastName" required placeholder="Votre nom">
+                            <input type="text" name="lastName" id="lastName" required placeholder="Votre nom">
                         </div>
                     </div>
                     
                     <div class="form-row">
                         <div class="form-group">
                             <label for="email">📧 Email </label>
-                            <input type="email" name="email" placeholder="votre@email.com">
+                            <input type="email" name="email" id="email" placeholder="votre@email.com">
                         </div>
                         <div class="form-group">
                             <label for="phone">📞 Téléphone *</label>
-                            <input type="tel" name="phone" required placeholder="+223 75 02 59 59">
+                            <input type="tel" name="phone" id="phone" required placeholder="+223 75 02 59 59">
                         </div>
                     </div>
                     
@@ -163,7 +163,7 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="date">📅 Date souhaitée *</label>
-                            <input type="date" name="date" required>
+                            <input type="date" name="date" id="date" required>
                         </div>
                         <div class="form-group">
                             <label for="time">🕐 Heure souhaitée *</label>

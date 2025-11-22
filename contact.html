@@ -89,7 +89,7 @@
                             <div class="contact-icon">📧</div>
                             <div class="contact-details">
                                 <h4>Email</h4>
-                                <p>PhysioPhelms2020@gmail.com</p>
+                                <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3b6b53424852546b535e575648090b090b7b5c565a525715585456">[email&#160;protected]</a></p>
                                 <p class="contact-note">Réponse sous 24h</p>
                             </div>
                         </div>
@@ -137,7 +137,10 @@
                             <a href="tel:+22375025959" class="btn-primary">
                                 📞 Appeler maintenant
                             </a>
-                            <a href="mailto:PhysioPhelms2020@gmail.com" class="btn-secondary">
+                            <a href="https://wa.me/22375025959" class="btn-primary" target="_blank">
+                                💬 WhatsApp
+                            </a>
+                            <a href="/cdn-cgi/l/email-protection#07576f7e746e68576f626b6a743537353747606a666e6b2964686a" class="btn-secondary">
                                 📧 Envoyer un email
                             </a>
                         </div>
@@ -248,6 +251,7 @@
                 <div class="cta-buttons">
                     <a href="rendez-vous.html" class="btn-primary">Prendre rendez-vous</a>
                     <a href="tel:+22375025959" class="btn-secondary">Appeler maintenant</a>
+                    <a href="https://wa.me/22375025959" class="btn-secondary" target="_blank">💬 WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -268,7 +272,7 @@
                     <p>Votre partenaire santé pour une récupération optimale.</p>
                     <div class="social-links">
                         <a href="tel:+22375025959" class="social-link">📞</a>
-                        <a href="mailto:PhysioPhelms2020@gmail.com" class="social-link">📧</a>
+                        <a href="/cdn-cgi/l/email-protection#dc8cb4a5afb5b38cb4b9b0b1afeeeceeec9cbbb1bdb5b0f2bfb3b1" class="social-link">📧</a>
                     </div>
                 </div>
                 
@@ -307,7 +311,7 @@
                         </div>
                         <div class="footer-contact-item">
                             <span class="contact-icon">📧</span>
-                            <span>PhysioPhelms2020@gmail.com</span>
+                            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4c1c24353f25231c242920213f7e7c7e7c0c2b212d2520622f2321">[email&#160;protected]</a></span>
                         </div>
                     </div>
                 </div>
@@ -325,52 +329,5 @@
     </button>
 
 
-    <script src="common.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="common.js"></script>
     <script>
-        // Contact form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-            // Simple validation
-            const requiredFields = ['contactName', 'contactEmail', 'contactSubject', 'contactMessage'];
-            let isValid = true;
-            
-            requiredFields.forEach(field => {
-                const input = document.getElementById(field);
-                if (!data[field]) {
-                    input.style.borderColor = '#dc2626';
-                    isValid = false;
-                } else {
-                    input.style.borderColor = '#e5e7eb';
-                }
-            });
-            
-            if (!isValid) {
-                alert('Veuillez remplir tous les champs obligatoires.');
-                return;
-            }
-            
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(data.contactEmail)) {
-                document.getElementById('contactEmail').style.borderColor = '#dc2626';
-                alert('Veuillez entrer une adresse email valide.');
-                return;
-            }
-            
-            // Success message
-            alert('Message envoyé ! Nous vous répondrons sous 24h.');
-            
-            // Reset form
-            this.reset();
-            
-            // In a real application, you would send this data to your server
-            console.log('Contact data:', data);
-        });
-    </script>
-</body>
-</html>
