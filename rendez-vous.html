@@ -7,7 +7,6 @@
     <meta name="description" content="Prenez rendez-vous en ligne avec Physio Phelms. Consultation gratuite et prise en charge personnalisée.">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="icon" type="image/jpeg" href="public/imgi_1_497090745_18066544382293413_4831932850810085523_n.jpg">
 </head>
 <body>
@@ -45,7 +44,6 @@
                 <a href="actualite.html" onclick="closeMobileMenu()"> Actualite</a>
                 <a href="rendez-vous.html" class="active" onclick="closeMobileMenu()">Rendez-vous</a>
                 <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
-                <!-- <a href="rendez-vous.html" class="btn-primary" onclick="closeMobileMenu()">Prendre RDV</a> -->
             </nav>
         </div>
     </header>
@@ -57,14 +55,10 @@
             <p>Réservez votre consultation en ligne. Nous vous contacterons pour confirmer votre rendez-vous.</p>
         </div>
     </section>
- <!-- Process Section -->
+
+    <!-- Process Section -->
     <section class="process-section">
         <div class="container">
-            <!-- <div class="section-header">
-                <h2>Comment ça <span class="gradient-text">fonctionne</span> ?</h2>
-                <p>Un processus simple et efficace pour votre prise en charge</p>
-            </div> -->
-            
             <div class="process-steps">
                 <div class="process-step">
                     <div class="step-number">1</div>
@@ -102,164 +96,163 @@
     </section>
 
     <!-- Appointment Section -->
- <section class="appointment">
-    <div class="container">
-        <div class="appointment-content">
-            <div class="appointment-form">
-                <div class="form-header">
-                    <h3>Formulaire de rendez-vous</h3>
-                    <p>Remplissez ce formulaire et nous vous contacterons sous 24h pour confirmer votre rendez-vous.</p>
-                </div>
-                
-                <form id="appointmentForm" action="https://formsubmit.co/ad769070@gmail.com" method="POST">
-                    <!-- Configuration FormSubmit -->
-                    <input type="hidden" name="_subject" value="🏥 Nouvelle demande de rendez-vous - PhysioPhelms">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="text" name="_honey" style="display:none">
-                    <!-- Retour à la même page après envoi -->
-                    <input type="hidden" name="_next" value="https://physiophelms.netlify.app/rendez-vous.html?submitted=true">
-                    
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="firstName">👤 Prénom *</label>
-                            <input type="text" name="firstName" id="firstName" required placeholder="Votre prénom">
-                        </div>
-                        <div class="form-group">
-                            <label for="lastName">Nom *</label>
-                            <input type="text" name="lastName" id="lastName" required placeholder="Votre nom">
-                        </div>
+    <section class="appointment">
+        <div class="container">
+            <div class="appointment-content">
+                <div class="appointment-form">
+                    <div class="form-header">
+                        <h3>Formulaire de rendez-vous</h3>
+                        <p>Remplissez ce formulaire et nous vous contacterons sous 24h pour confirmer votre rendez-vous.</p>
                     </div>
                     
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">📧 Email </label>
-                            <input type="email" name="email"  placeholder="votre@email.com">
+                    <form action="https://formsubmit.co/ad769070@gmail.com" method="POST">
+                        <!-- Configuration FormSubmit -->
+                        <input type="hidden" name="_subject" value="🏥 Nouvelle demande de rendez-vous - PhysioPhelms">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="text" name="_honey" style="display:none">
+                        <!-- Retour à la même page après envoi -->
+                        <input type="hidden" name="_next" value="https://physiophelms.netlify.app/rendez-vous.html?submitted=true">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">👤 Prénom *</label>
+                                <input type="text" name="firstName" id="firstName" required placeholder="Votre prénom">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Nom *</label>
+                                <input type="text" name="lastName" id="lastName" required placeholder="Votre nom">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="phone">📞 Téléphone *</label>
-                            <input type="tel" name="phone" id="phone" required placeholder="+223 75 02 59 59">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">📧 Email </label>
+                                <input type="email" name="email" id="email" placeholder="votre@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">📞 Téléphone *</label>
+                                <input type="tel" name="phone" id="phone" required placeholder="+223 75 02 59 59">
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="service">Service souhaité *</label>
-                        <select name="service" required>
-                            <option value="">Sélectionnez un service</option>
-                            <option value="Physiothérapie générale">Physiothérapie générale</option>
-                            <option value="Physiothérapie Gériatrique">Physiothérapie Gériatrique</option>
-                            <option value="Physiothérapie pédiatrique">Physiothérapie pédiatrique</option>
-                            <option value="Physiothérapie neurologique">Physiothérapie neurologique</option>
-                            <option value="Physiothérapie respiratoire">Physiothérapie respiratoire</option>
-                            <option value="Physiothérapie obstétricale">Physiothérapie obstétricale</option>
-                            <option value="Physiothérapie sportive">Physiothérapie sportive</option>
-                            <option value="Activité physique adaptée">Activité physique adaptée</option>
-                            <option value="Massage thérapeutique">Massage thérapeutique</option>
-                            <option value="Consultation générale">Consultation générale</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-row">
+                        
                         <div class="form-group">
-                            <label for="date">📅 Date souhaitée *</label>
-                            <input type="date" name="date" id="date" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="time">🕐 Heure souhaitée *</label>
-                            <select name="time" required>
-                                <option value="">Sélectionnez une heure</option>
-                                <option value="08:00">08:00</option>
-                                <option value="08:30">08:30</option>
-                                <option value="09:00">09:00</option>
-                                <option value="09:30">09:30</option>
-                                <option value="10:00">10:00</option>
-                                <option value="10:30">10:30</option>
-                                <option value="11:00">11:00</option>
-                                <option value="11:30">11:30</option>
-                                <option value="14:00">14:00</option>
-                                <option value="14:30">14:30</option>
-                                <option value="15:00">15:00</option>
-                                <option value="15:30">15:30</option>
-                                <option value="16:00">16:00</option>
-                                <option value="16:30">16:30</option>
-                                <option value="17:00">17:00</option>
-                                <option value="17:30">17:30</option>
+                            <label for="service">Service souhaité *</label>
+                            <select name="service" id="service" required>
+                                <option value="">Sélectionnez un service</option>
+                                <option value="Physiothérapie générale">Physiothérapie générale</option>
+                                <option value="Physiothérapie Gériatrique">Physiothérapie Gériatrique</option>
+                                <option value="Physiothérapie pédiatrique">Physiothérapie pédiatrique</option>
+                                <option value="Physiothérapie neurologique">Physiothérapie neurologique</option>
+                                <option value="Physiothérapie respiratoire">Physiothérapie respiratoire</option>
+                                <option value="Physiothérapie obstétricale">Physiothérapie obstétricale</option>
+                                <option value="Physiothérapie sportive">Physiothérapie sportive</option>
+                                <option value="Activité physique adaptée">Activité physique adaptée</option>
+                                <option value="Massage thérapeutique">Massage thérapeutique</option>
+                                <option value="Consultation générale">Consultation générale</option>
                             </select>
                         </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">💬 Message (optionnel)</label>
-                        <textarea name="message" rows="4" placeholder="Entrez votre message..."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn-primary btn-full">Demander un rendez-vous</button>
-                    
-                    <p class="form-note">* Champs obligatoires. Nous vous contacterons sous 24h pour confirmer votre rendez-vous.</p>
-                </form>
-            </div>
-            
-            <div class="appointment-info">
-                <div class="info-card">
-                    <h3>Informations pratiques</h3>
-                    
-                    <div class="info-item">
-                        <div class="info-icon">🕐</div>
-                        <div class="info-content">
-                            <h4>Horaires d'ouverture</h4>
-                            <p>Lundi - Vendredi : 8h00 - 18h00<br>
-                            Samedi : 8h00 - 13h00<br>
-                            Dimanche : Sous RDV!</p>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">📅 Date souhaitée *</label>
+                                <input type="date" name="date" id="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">🕐 Heure souhaitée *</label>
+                                <select name="time" id="time" required>
+                                    <option value="">Sélectionnez une heure</option>
+                                    <option value="08:00">08:00</option>
+                                    <option value="08:30">08:30</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="09:30">09:30</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="10:30">10:30</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="11:30">11:30</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="14:30">14:30</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="15:30">15:30</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="16:30">16:30</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="17:30">17:30</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <div class="info-icon">📅</div>
-                        <div class="info-content">
-                            <h4>Délai de réponse</h4>
-                            <p>Nous vous contacterons sous 24h pour confirmer votre rendez-vous et ajuster si nécessaire la date ou l'heure.</p>
+                        
+                        <div class="form-group">
+                            <label for="message">💬 Message (optionnel)</label>
+                            <textarea name="message" id="message" rows="4" placeholder="Entrez votre message..."></textarea>
                         </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <div class="info-icon">👤</div>
-                        <div class="info-content">
-                            <h4>Première consultation</h4>
-                            <p>Votre première consultation comprend un bilan complet et l'établissement de votre plan de traitement personnalisé.</p>
-                        </div>
-                    </div>
+                        
+                        <button type="submit" class="btn-primary btn-full">Demander un rendez-vous</button>
+                        
+                        <p class="form-note">* Champs obligatoires. Nous vous contacterons sous 24h pour confirmer votre rendez-vous.</p>
+                    </form>
                 </div>
                 
-                <div class="help-card">
-                    <h3>Besoin d'aide ?</h3>
-                    <p>Notre équipe est disponible pour répondre à toutes vos questions et vous aider à choisir le service le plus adapté à vos besoins.</p>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <span class="contact-icon">📞</span>
-                            <span>+223 75 02 59 59</span>
+                <div class="appointment-info">
+                    <div class="info-card">
+                        <h3>Informations pratiques</h3>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">🕐</div>
+                            <div class="info-content">
+                                <h4>Horaires d'ouverture</h4>
+                                <p>Lundi - Vendredi : 8h00 - 18h00<br>
+                                Samedi : 8h00 - 13h00<br>
+                                Dimanche : Sous RDV!</p>
+                            </div>
                         </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">📧</span>
-                            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b7e7dfcec4ded8e7dfd2dbdac485878587f7d0dad6dedb99d4d8da">[email&#160;protected]</a></span>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">📅</div>
+                            <div class="info-content">
+                                <h4>Délai de réponse</h4>
+                                <p>Nous vous contacterons sous 24h pour confirmer votre rendez-vous et ajuster si nécessaire la date ou l'heure.</p>
+                            </div>
                         </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">📍</span>
-                            <span>Missabougou, Bamako</span>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">👤</div>
+                            <div class="info-content">
+                                <h4>Première consultation</h4>
+                                <p>Votre première consultation comprend un bilan complet et l'établissement de votre plan de traitement personnalisé.</p>
+                            </div>
                         </div>
                     </div>
-                    <a href="contact.html" class="btn-secondary btn-full">Nous contacter</a>
-                </div>
-                
-                <div class="emergency-card">
-                    <h3>🚨 Urgences</h3>
-                    <p>Pour les urgences médicales, contactez-nous immédiatement. Nous sommes disponibles 24h/24.</p>
-                    <a href="tel:+22375025959" class="btn-primary btn-full">Appeler maintenant</a>
+                    
+                    <div class="help-card">
+                        <h3>Besoin d'aide ?</h3>
+                        <p>Notre équipe est disponible pour répondre à toutes vos questions et vous aider à choisir le service le plus adapté à vos besoins.</p>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <span class="contact-icon">📞</span>
+                                <span>+223 75 02 59 59</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📧</span>
+                                <span>PhysioPhelms2020@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📍</span>
+                                <span>Missabougou, Bamako</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="btn-secondary btn-full">Nous contacter</a>
+                    </div>
+                    
+                    <div class="emergency-card">
+                        <h3>🚨 Urgences</h3>
+                        <p>Pour les urgences médicales, contactez-nous immédiatement. Nous sommes disponibles 24h/24.</p>
+                        <a href="tel:+22375025959" class="btn-primary btn-full">Appeler maintenant</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
    
     <!-- Footer -->
     <footer class="footer">
@@ -276,7 +269,7 @@
                     <p>Votre partenaire santé pour une récupération optimale.</p>
                     <div class="social-links">
                         <a href="tel:+22375025959" class="social-link">📞</a>
-                        <a href="/cdn-cgi/l/email-protection#df8fb7a6acb6b08fb7bab3b2acedefedef9fb8b2beb6b3f1bcb0b2" class="social-link">📧</a>
+                        <a href="mailto:PhysioPhelms2020@gmail.com" class="social-link">📧</a>
                     </div>
                 </div>
                 
@@ -315,7 +308,7 @@
                         </div>
                         <div class="footer-contact-item">
                             <span class="contact-icon">📧</span>
-                            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="54043c2d273d3b043c3138392766646664143339353d387a373b39">[email&#160;protected]</a></span>
+                            <span>PhysioPhelms2020@gmail.com</span>
                         </div>
                     </div>
                 </div>
@@ -328,95 +321,29 @@
             </div>
         </div>
     </footer>
-         <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+    
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="common.js"></script>
+    <script src="common.js"></script>
     <script>
-        // Form submission
-        document.getElementById('appointmentForm').addEventListener('submit', function(e) {
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-            // Simple validation
-            const requiredFields = ['firstName', 'lastName', 'phone', 'service', 'date', 'time'];
-            let isValid = true;
-            
-            requiredFields.forEach(field => {
-                const input = document.getElementById(field);
-                if (!data[field]) {
-                    if (input) input.style.borderColor = '#dc2626';
-                    isValid = false;
-                } else {
-                    if (input) input.style.borderColor = '#e5e7eb';
-                }
-            });
-            
-            if (!isValid) {
-                e.preventDefault();
-                alert('Veuillez remplir tous les champs obligatoires.');
-                return false;
-            }
-            
-            // Email validation (seulement si email est rempli)
-            if (data.email && data.email.trim() !== '') {
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(data.email)) {
-                    e.preventDefault();
-                    document.getElementById('email').style.borderColor = '#dc2626';
-                    alert('Veuillez entrer une adresse email valide.');
-                    return false;
-                }
-            }
-            
-            // Phone validation (updated for Mali phone numbers)
-            const phoneRegex = /^(\+223|00223|0)?[56789]\d{7}$/;
-            if (!phoneRegex.test(data.phone.replace(/\s/g, ''))) {
-                e.preventDefault();
-                document.getElementById('phone').style.borderColor = '#dc2626';
-                alert('Veuillez entrer un numéro de téléphone malien valide.');
-                return false;
-            }
-            
-            // Date validation (not in the past)
-            const selectedDate = new Date(data.date);
-            const today = new Date();
-            today.setHours(0, 0, 0, 0);
-            
-            if (selectedDate < today) {
-                e.preventDefault();
-                document.getElementById('date').style.borderColor = '#dc2626';
-                alert('Veuillez sélectionner une date future.');
-                return false;
-            }
-            
-            // Si tout est valide, le formulaire s'enverra vers FormSubmit
-            // Pas besoin de preventDefault, laissez le formulaire se soumettre normalement
-            return true;
-        });
-
-        // Set minimum date for appointment form
+        // Définir la date minimale (demain)
         document.addEventListener('DOMContentLoaded', function() {
             const dateInput = document.getElementById('date');
-            const today = new Date();
-            const tomorrow = new Date(today);
-            tomorrow.setDate(tomorrow.getDate() + 1);
-            
-            dateInput.min = tomorrow.toISOString().split('T')[0];
+            if (dateInput) {
+                const today = new Date();
+                const tomorrow = new Date(today);
+                tomorrow.setDate(tomorrow.getDate() + 1);
+                dateInput.min = tomorrow.toISOString().split('T')[0];
+            }
         });
-    </script>
-    <script>
-// Vérifie si l'utilisateur vient de soumettre le formulaire
-if (window.location.search.includes('submitted=true')) {
-    // Afficher le message de confirmation
-    alert('✅ Votre demande a été envoyée avec succès ! Nous vous contacterons sous 24h pour confirmer votre rendez-vous.');
-    
-    // Nettoyer l'URL (enlever ?submitted=true)
-    window.history.replaceState({}, document.title, window.location.pathname);
-}
+
+        // Afficher message de confirmation après soumission
+        if (window.location.search.includes('submitted=true')) {
+            alert('✅ Votre demande a été envoyée avec succès ! Nous vous contacterons sous 24h pour confirmer votre rendez-vous.');
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
     </script>
 </body>
 </html>
