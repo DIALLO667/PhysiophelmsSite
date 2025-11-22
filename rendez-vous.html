@@ -135,7 +135,7 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="email">📧 Email </label>
-                            <input type="email" name="email" id="email" placeholder="votre@email.com">
+                            <input type="email" name="email"  placeholder="votre@email.com">
                         </div>
                         <div class="form-group">
                             <label for="phone">📞 Téléphone *</label>
@@ -241,7 +241,7 @@
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">📧</span>
-                            <span>PhysioPhelms2020@gmail.com</span>
+                            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b7e7dfcec4ded8e7dfd2dbdac485878587f7d0dad6dedb99d4d8da">[email&#160;protected]</a></span>
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">📍</span>
@@ -276,7 +276,7 @@
                     <p>Votre partenaire santé pour une récupération optimale.</p>
                     <div class="social-links">
                         <a href="tel:+22375025959" class="social-link">📞</a>
-                        <a href="mailto:PhysioPhelms2020@gmail.com" class="social-link">📧</a>
+                        <a href="/cdn-cgi/l/email-protection#df8fb7a6acb6b08fb7bab3b2acedefedef9fb8b2beb6b3f1bcb0b2" class="social-link">📧</a>
                     </div>
                 </div>
                 
@@ -315,7 +315,7 @@
                         </div>
                         <div class="footer-contact-item">
                             <span class="contact-icon">📧</span>
-                            <span>PhysioPhelms2020@gmail.com</span>
+                            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="54043c2d273d3b043c3138392766646664143339353d387a373b39">[email&#160;protected]</a></span>
                         </div>
                     </div>
                 </div>
@@ -333,49 +333,52 @@
     </button>
 
 
-    <script src="common.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="common.js"></script>
     <script>
         // Form submission
         document.getElementById('appointmentForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
             // Get form data
             const formData = new FormData(this);
             const data = Object.fromEntries(formData);
             
             // Simple validation
-            const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'service', 'date', 'time'];
+            const requiredFields = ['firstName', 'lastName', 'phone', 'service', 'date', 'time'];
             let isValid = true;
             
             requiredFields.forEach(field => {
                 const input = document.getElementById(field);
                 if (!data[field]) {
-                    input.style.borderColor = '#dc2626';
+                    if (input) input.style.borderColor = '#dc2626';
                     isValid = false;
                 } else {
-                    input.style.borderColor = '#e5e7eb';
+                    if (input) input.style.borderColor = '#e5e7eb';
                 }
             });
             
             if (!isValid) {
+                e.preventDefault();
                 alert('Veuillez remplir tous les champs obligatoires.');
-                return;
+                return false;
             }
             
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(data.email)) {
-                document.getElementById('email').style.borderColor = '#dc2626';
-                alert('Veuillez entrer une adresse email valide.');
-                return;
+            // Email validation (seulement si email est rempli)
+            if (data.email && data.email.trim() !== '') {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(data.email)) {
+                    e.preventDefault();
+                    document.getElementById('email').style.borderColor = '#dc2626';
+                    alert('Veuillez entrer une adresse email valide.');
+                    return false;
+                }
             }
             
             // Phone validation (updated for Mali phone numbers)
             const phoneRegex = /^(\+223|00223|0)?[56789]\d{7}$/;
             if (!phoneRegex.test(data.phone.replace(/\s/g, ''))) {
+                e.preventDefault();
                 document.getElementById('phone').style.borderColor = '#dc2626';
                 alert('Veuillez entrer un numéro de téléphone malien valide.');
-                return;
+                return false;
             }
             
             // Date validation (not in the past)
@@ -384,19 +387,15 @@
             today.setHours(0, 0, 0, 0);
             
             if (selectedDate < today) {
+                e.preventDefault();
                 document.getElementById('date').style.borderColor = '#dc2626';
                 alert('Veuillez sélectionner une date future.');
-                return;
+                return false;
             }
             
-            // Success message
-            alert('Demande de rendez-vous envoyée ! Nous vous contacterons sous 24h pour confirmer.');
-            
-            // Reset form
-            this.reset();
-            
-            // In a real application, you would send this data to your server
-            console.log('Appointment data:', data);
+            // Si tout est valide, le formulaire s'enverra vers FormSubmit
+            // Pas besoin de preventDefault, laissez le formulaire se soumettre normalement
+            return true;
         });
 
         // Set minimum date for appointment form
@@ -412,18 +411,12 @@
     <script>
 // Vérifie si l'utilisateur vient de soumettre le formulaire
 if (window.location.search.includes('submitted=true')) {
-    // Déclenchez votre popup ici
-    // Si vous avez déjà un popup, appelez-le ici
+    // Afficher le message de confirmation
+    alert('✅ Votre demande a été envoyée avec succès ! Nous vous contacterons sous 24h pour confirmer votre rendez-vous.');
     
-    // Exemple avec alert simple :
-    alert('✅ Votre demande a été envoyée avec succès ! Nous vous contacterons sous 24h.');
-    
-    // OU si vous avez un popup personnalisé (remplacez par votre code) :
-    // document.getElementById('success-popup').style.display = 'block';
-    
-    // Nettoie l'URL (enlève le ?submitted=true) pour éviter que le popup se réaffiche si on recharge
+    // Nettoyer l'URL (enlever ?submitted=true)
     window.history.replaceState({}, document.title, window.location.pathname);
 }
-</script>
+    </script>
 </body>
 </html>
