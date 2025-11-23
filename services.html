@@ -128,7 +128,7 @@
                 </div>
                 
                 <div class="service-card">
-                    <img src="public/imgi_35_468788983_18049689374293413_6002179877574440013_n.jpg" alt="Physiothérapie respiratoire">
+                    <img src="public/respi.jpeg" alt="Physiothérapie respiratoire">
                     <div class="service-content">
                         <div class="service-icon"><i class="fas fa-lungs"></i></div>
                         <h3>Physiothérapie respiratoire</h3>
@@ -209,7 +209,7 @@
                 </div>
             </div>
             
-            <div class="facility-showcase">
+            <!-- <div class="facility-showcase">
                 <div class="facility-content">
                     <div class="facility-text">
                         <h3>Des équipements modernes pour votre rééducation</h3>
@@ -221,7 +221,32 @@
                         <img src="public/imgi_11_482230671_18059299208293413_3543913593041663820_n.jpg" alt="Salle d'exercices">
                     </div>
                 </div>
+            </div> -->
+            <div class="facility-showcase">
+    <div class="facility-content">
+        <div class="facility-text">
+            <h3>Des équipements modernes pour votre rééducation</h3>
+            <p>Notre centre dispose d'équipements de pointe et d'espaces spécialement conçus pour offrir les meilleurs soins de physiothérapie dans un environnement confortable et professionnel.</p>
+            <a href="contact.html" class="btn-primary">Visiter notre centre</a>
+        </div>
+
+        <!-- CARROUSEL -->
+        <div class="facility-carousel">
+            <button class="carousel-btn prev">❮</button>
+
+            <div class="carousel-track">
+                <img src="public/equipement3.JPG" alt="equipement1">
+                <img src="public/equipement2.JPG" alt="equipement2">
+                <img src="public/equipement6.JPG" alt="equipement3">
+                <img src="public/equipement4.JPG" alt="equipement4">
+
             </div>
+
+            <button class="carousel-btn next">❯</button>
+        </div>
+    </div>
+</div>
+
         </div>
     </section>
 
@@ -309,5 +334,24 @@
     </button>
 
     <script src="common.js"></script>
+    <script>
+const track = document.querySelector('.carousel-track');
+const nextBtn = document.querySelector('.carousel-btn.next');
+const prevBtn = document.querySelector('.carousel-btn.prev');
+
+let index = 0;
+const total = track.children.length;
+
+nextBtn.addEventListener('click', () => {
+    index = (index + 1) % total;  // Retour automatique au début
+    track.style.transform = `translateX(-${index * 100}%)`;
+});
+
+prevBtn.addEventListener('click', () => {
+    index = (index - 1 + total) % total; // Retour à la fin si index < 0
+    track.style.transform = `translateX(-${index * 100}%)`;
+});
+</script>
+
 </body>
 </html>
