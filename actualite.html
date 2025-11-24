@@ -643,6 +643,7 @@ Prévenir les blessures neuromusculosquelettiques du corps humain.</p>
 
 <br>
 
+
 <script>
 /* ===== CARROUSEL D'ÉQUIPE — VERSION DÉFINITIVE ===== */
 (function () {
@@ -676,12 +677,10 @@ Prévenir les blessures neuromusculosquelettiques du corps humain.</p>
 
   /* === Mise à jour du carrousel === */
   function updateCarousel() {
-   // largeur réelle de la première slide (assumée que toutes ont la même largeur)
     const slideWidth = slides[0].offsetWidth;
     carousel.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-
     dots.forEach((d, idx) => d.classList.toggle("active", idx === currentSlide)); 
-}
+  }
 
   /* === Navigation === */
   function moveCarousel(direction) {
@@ -728,46 +727,26 @@ Prévenir les blessures neuromusculosquelettiques du corps humain.</p>
       },
       { threshold: 0.45 }
     );
-
     observer.observe(equipeSection);
   } else {
     startAutoplay();
   }
 
-  /* === Swipe mobile === */
-  let touchStartX = 0;
-  let touchMoveX = 0;
+  /* === Swipe mobile simplifié === */
+  let startX = 0;
+  const THRESHOLD = 60;
 
-  carousel.addEventListener(
-    "touchstart",
-    (e) => {
-      stopAutoplay();
-      touchStartX = e.changedTouches[0].clientX;
-    },
-    { passive: true }
-  );
+  carousel.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
 
-  carousel.addEventListener(
-    "touchmove",
-    (e) => {
-      touchMoveX = e.changedTouches[0].clientX;
-    },
-    { passive: true }
-  );
+  carousel.addEventListener("touchend", (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
 
-  carousel.addEventListener(
-    "touchend",
-    (e) => {
-      const diff = touchStartX - e.changedTouches[0].clientX;
-      const THRESHOLD = 60;
-
-      if (diff > THRESHOLD) moveCarousel(1);
-      else if (diff < -THRESHOLD) moveCarousel(-1);
-
-      pauseAutoplayTemporarily();
-    },
-    { passive: true }
-  );
+    if (diff > THRESHOLD) moveCarousel(1);
+    else if (diff < -THRESHOLD) moveCarousel(-1);
+  });
 
   /* === Clavier === */
   document.addEventListener("keydown", (e) => {
