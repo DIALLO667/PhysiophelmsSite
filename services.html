@@ -9,6 +9,56 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="icon" type="image/jpeg" href="public/imgi_1_497090745_18066544382293413_4831932850810085523_n.jpg">
+    <style>
+        /* Styles pour le système de "Lire plus/moins" */
+        .service-description {
+            margin-bottom: 1rem;
+        }
+        
+        .description-preview {
+            display: block;
+        }
+        
+        .description-full {
+            display: none;
+        }
+        
+        .description-full.expanded {
+            display: block;
+        }
+        
+        .description-preview.collapsed {
+            display: none;
+        }
+        
+        .read-more-btn {
+            background: none;
+            border: none;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 0.5rem 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+            margin-bottom: 1rem;
+        }
+        
+        .read-more-btn:hover {
+            color: var(--primary-light);
+            transform: translateX(5px);
+        }
+        
+        .read-more-btn i {
+            transition: transform 0.3s ease;
+        }
+        
+        .read-more-btn.expanded i {
+            transform: rotate(180deg);
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -19,7 +69,7 @@
        <img src="public/logop.JPG" alt="Physio Phelms Logo" class="logo-img">
 
                     <div class="logo-text">
-                        <h1>Physio Phelms</h1>
+                        <h1>Physiophelms </h1>
                         <p>Un coup de main vers une santé optimale</p>
                     </div>
                 </div>
@@ -27,7 +77,7 @@
                 <nav class="nav desktop-nav">
                     <a href="accueil.html">Accueil</a>
                     <a href="services.html" class="active">Services</a>
-                    <a href="actualite.html">Actualite</a>
+                    <a href="actualite.html">Actualités</a>
                     <a href="rendez-vous.html">Rendez-vous</a>
                     <a href="contact.html">Contact</a>
                     <a href="rendez-vous.html" class="btn-primary">Prendre RDV</a>
@@ -43,7 +93,7 @@
             <nav class="mobile-nav" id="mobileNav">
                 <a href="accueil.html" onclick="closeMobileMenu()">Accueil</a>
                 <a href="services.html" class="active" onclick="closeMobileMenu()">Services</a>
-                <a href="actualite.html" onclick="closeMobileMenu()">Actualite</a>
+                <a href="actualite.html" onclick="closeMobileMenu()">Actualités</a>
                 <a href="rendez-vous.html" onclick="closeMobileMenu()">Rendez-vous</a>
                 <a href="contact.html" onclick="closeMobileMenu()">Contact</a>
                 <a href="rendez-vous.html" class="btn-primary" onclick="closeMobileMenu()">Prendre RDV</a>
@@ -63,189 +113,314 @@
     <section class="services">
         <div class="container">
             <div class="services-grid">
+                <!-- Service 1: Physiothérapie générale -->
                 <div class="service-card">
                     <img src="public/generaleG.jpeg" alt="Physiothérapie générale">
                     <div class="service-content">
                         <div class="service-icon"><i class="fas fa-hospital"></i></div>
                         <h3>Physiothérapie générale</h3>
-                        <p>Traitement complet pour troubles musculo-squelettiques et rééducation fonctionnelle. Nous traitons les douleurs dorsales, cervicales, articulaires et musculaires.</p>
-                        <ul class="service-details">
-                            <li>• Rééducation post-traumatique</li>
-                            <li>• Traitement des douleurs chroniques</li>
-                            <li>• Mobilisation articulaire</li>
-                            <li>• Renforcement musculaire</li>
-                        </ul>
+                        
+                        <div class="service-description">
+                            <div class="description-preview">
+                                <p>Traitement complet pour troubles musculo-squelettiques et rééducation fonctionnelle. Nous traitons les douleurs dorsales, cervicales...</p>
+                            </div>
+                            
+                            <div class="description-full">
+                                <p>Traitement complet pour troubles musculo-squelettiques et rééducation fonctionnelle. Nous traitons les douleurs dorsales, cervicales, articulaires et musculaires.</p>
+                                <ul class="service-details">
+                                    <li>• Rééducation post-traumatique</li>
+                                    <li>• Traitement des douleurs chroniques</li>
+                                    <li>• Mobilisation articulaire</li>
+                                    <li>• Renforcement musculaire</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <button class="read-more-btn" onclick="toggleDescription(this)">
+                            Voir plus <i class="fas fa-chevron-down"></i>
+                        </button>
+                        
                         <a href="rendez-vous.html" class="service-link">Prendre rendez-vous →</a>
                     </div>
                 </div>
                 
+                <!-- Service 2: Physiothérapie Gériatrique -->
                 <div class="service-card">
                     <img src="public/geriatrique.jpeg" alt="Physiothérapie Gériatrique">
                     <div class="service-content">
                        <div class="service-icon"><i class="fas fa-user-clock"></i></div>
                         <h3>Physiothérapie Gériatrique</h3>
-                        <p>Soins spécialisés pour personnes âgées, maintien de l'autonomie et prévention des chutes. Amélioration de la qualité de vie des seniors.</p>
-                        <ul class="service-details">
-                            <li>• Prévention des chutes</li>
-                            <li>• Maintien de l'équilibre</li>
-                            <li>• Exercices d'autonomie</li>
-                            <li>• Rééducation de la marche</li>
-                        </ul>
+                        
+                        <div class="service-description">
+                            <div class="description-preview">
+                                <p>Soins spécialisés pour personnes âgées, maintien de l'autonomie et prévention des chutes. Amélioration de la qualité...</p>
+                            </div>
+                            
+                            <div class="description-full">
+                                <p>Soins spécialisés pour personnes âgées, maintien de l'autonomie et prévention des chutes. Amélioration de la qualité de vie des seniors.</p>
+                                <ul class="service-details">
+                                    <li>• Prévention des chutes</li>
+                                    <li>• Maintien de l'équilibre</li>
+                                    <li>• Exercices d'autonomie</li>
+                                    <li>• Rééducation de la marche</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <button class="read-more-btn" onclick="toggleDescription(this)">
+                            Voir plus <i class="fas fa-chevron-down"></i>
+                        </button>
+                        
                         <a href="rendez-vous.html" class="service-link">Prendre rendez-vous →</a>
                     </div>
                 </div>
                 
+                <!-- Service 3: Physiothérapie pédiatrique -->
                 <div class="service-card">
                     <img src="public/pediatriqueG.jpeg" alt="Physiothérapie pédiatrique">
                     <div class="service-content">
                         <div class="service-icon"><i class="fas fa-baby"></i></div>
                         <h3>Physiothérapie pédiatrique</h3>
-                        <p>Accompagnement du développement moteur et traitement des troubles chez l'enfant. Prise en charge adaptée aux besoins spécifiques des plus jeunes.</p>
-                        <ul class="service-details">
-                            <li>• Retards de développement moteur</li>
-                            <li>• Troubles de la posture</li>
-                            <li>• Rééducation ludique</li>
-                            <li>• Accompagnement des parents</li>
-                        </ul>
+                        
+                        <div class="service-description">
+                            <div class="description-preview">
+                                <p>Accompagnement du développement moteur et traitement des troubles chez l'enfant. Prise en charge adaptée aux besoins...</p>
+                            </div>
+                            
+                            <div class="description-full">
+                                <p>Accompagnement du développement moteur et traitement des troubles chez l'enfant. Prise en charge adaptée aux besoins spécifiques des plus jeunes.</p>
+                                <ul class="service-details">
+                                    <li>• Retards de développement moteur</li>
+                                    <li>• Troubles de la posture</li>
+                                    <li>• Rééducation ludique</li>
+                                    <li>• Accompagnement des parents</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <button class="read-more-btn" onclick="toggleDescription(this)">
+                            Voir plus <i class="fas fa-chevron-down"></i>
+                        </button>
+                        
                         <a href="rendez-vous.html" class="service-link">Prendre rendez-vous →</a>
                     </div>
                 </div>
                 
+                <!-- Service 4: Physiothérapie neurologique -->
                 <div class="service-card">
                     <img src="public/neurologique.jpeg" alt="Physiothérapie neurologique">
                     <div class="service-content">
                         <div class="service-icon"><i class="fas fa-brain"></i></div>
                         <h3>Physiothérapie neurologique</h3>
-                        <p>Rééducation après AVC, traumatisme crânien, sclérose en plaques et autres pathologies neurologiques. Récupération des fonctions motrices.</p>
-                        <ul class="service-details">
-                            <li>• Rééducation post-AVC</li>
-                            <li>• Troubles de l'équilibre</li>
-                            <li>• Récupération motrice</li>
-                            <li>• Stimulation neurologique</li>
-                        </ul>
+                        
+                        <div class="service-description">
+                            <div class="description-preview">
+                                <p>Rééducation après AVC, traumatisme crânien, sclérose en plaques et autres pathologies neurologiques. Récupération des...</p>
+                            </div>
+                            
+                            <div class="description-full">
+                                <p>Rééducation après AVC, traumatisme crânien, sclérose en plaques et autres pathologies neurologiques. Récupération des fonctions motrices.</p>
+                                <ul class="service-details">
+                                    <li>• Rééducation post-AVC</li>
+                                    <li>• Troubles de l'équilibre</li>
+                                    <li>• Récupération motrice</li>
+                                    <li>• Stimulation neurologique</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <button class="read-more-btn" onclick="toggleDescription(this)">
+                            Voir plus <i class="fas fa-chevron-down"></i>
+                        </button>
+                        
                         <a href="rendez-vous.html" class="service-link">Prendre rendez-vous →</a>
                     </div>
                 </div>
                 
+                <!-- Service 5: Physiothérapie respiratoire -->
                 <div class="service-card">
                     <img src="public/respi.jpeg" alt="Physiothérapie respiratoire">
                     <div class="service-content">
                         <div class="service-icon"><i class="fas fa-lungs"></i></div>
                         <h3>Physiothérapie respiratoire</h3>
-                        <p>Amélioration de la fonction respiratoire et traitement des troubles pulmonaires. Techniques de désencombrement et rééducation respiratoire.</p>
-                        <ul class="service-details">
-                            <li>• Désencombrement bronchique</li>
-                            <li>• Rééducation respiratoire</li>
-                            <li>• Exercices de ventilation</li>
-                            <li>• Prévention des infections</li>
-                        </ul>
+                        
+                        <div class="service-description">
+                            <div class="description-preview">
+                                <p>Amélioration de la fonction respiratoire et traitement des troubles pulmonaires. Techniques de désencombrement et...</p>
+                            </div>
+                            
+                            <div class="description-full">
+                                <p>Amélioration de la fonction respiratoire et traitement des troubles pulmonaires. Techniques de désencombrement et rééducation respiratoire.</p>
+                                <ul class="service-details">
+                                    <li>• Désencombrement bronchique</li>
+                                    <li>• Rééducation respiratoire</li>
+                                    <li>• Exercices de ventilation</li>
+                                    <li>• Prévention des infections</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <button class="read-more-btn" onclick="toggleDescription(this)">
+                            Voir plus <i class="fas fa-chevron-down"></i>
+                        </button>
+                        
                         <a href="rendez-vous.html" class="service-link">Prendre rendez-vous →</a>
                     </div>
                 </div>
                 
+                <!-- Service 6: Physiothérapie obstétricale -->
                 <div class="service-card">
                     <img src="public/obstetricaleG.jpeg" alt="Physiothérapie obstétricale">
                     <div class="service-content">
                        <div class="service-icon"><i class="fas fa-heart-pulse"></i></div>
                         <h3>Physiothérapie obstétricale</h3>
-                        <p>Accompagnement pré et post-natal, rééducation périnéale et préparation à l'accouchement. Suivi personnalisé pour les futures et jeunes mamans.</p>
-                        <ul class="service-details">
-                            <li>• Préparation à l'accouchement</li>
-                            <li>• Rééducation périnéale</li>
-                            <li>• Soulagement des douleurs</li>
-                            <li>• Récupération post-partum</li>
-                        </ul>
+                        
+                        <div class="service-description">
+                            <div class="description-preview">
+                                <p>Accompagnement pré et post-natal, rééducation périnéale et préparation à l'accouchement. Suivi personnalisé pour...</p>
+                            </div>
+                            
+                            <div class="description-full">
+                                <p>Accompagnement pré et post-natal, rééducation périnéale et préparation à l'accouchement. Suivi personnalisé pour les futures et jeunes mamans.</p>
+                                <ul class="service-details">
+                                    <li>• Préparation à l'accouchement</li>
+                                    <li>• Rééducation périnéale</li>
+                                    <li>• Soulagement des douleurs</li>
+                                    <li>• Récupération post-partum</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <button class="read-more-btn" onclick="toggleDescription(this)">
+                            Voir plus <i class="fas fa-chevron-down"></i>
+                        </button>
+                        
                         <a href="rendez-vous.html" class="service-link">Prendre rendez-vous →</a>
                     </div>
                 </div>
                 
+                <!-- Service 7: Physiothérapie sportive -->
                 <div class="service-card">
                     <img src="public/sportiveG.jpeg" alt="Physiothérapie sportive">
                     <div class="service-content">
                         <div class="service-icon"><i class="fas fa-running"></i></div>
                         <h3>Physiothérapie sportive</h3>
-                        <p>Prévention et traitement des blessures sportives, optimisation des performances. Accompagnement des sportifs de tous niveaux.</p>
-                        <ul class="service-details">
-                            <li>• Traitement des blessures</li>
-                            <li>• Prévention des récidives</li>
-                            <li>• Optimisation des performances</li>
-                            <li>• Retour au sport sécurisé</li>
-                        </ul>
+                        
+                        <div class="service-description">
+                            <div class="description-preview">
+                                <p>Prévention et traitement des blessures sportives, optimisation des performances. Accompagnement des sportifs de...</p>
+                            </div>
+                            
+                            <div class="description-full">
+                                <p>Prévention et traitement des blessures sportives, optimisation des performances. Accompagnement des sportifs de tous niveaux.</p>
+                                <ul class="service-details">
+                                    <li>• Traitement des blessures</li>
+                                    <li>• Prévention des récidives</li>
+                                    <li>• Optimisation des performances</li>
+                                    <li>• Retour au sport sécurisé</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <button class="read-more-btn" onclick="toggleDescription(this)">
+                            Voir plus <i class="fas fa-chevron-down"></i>
+                        </button>
+                        
                         <a href="rendez-vous.html" class="service-link">Prendre rendez-vous →</a>
                     </div>
                 </div>
                 
+                <!-- Service 8: Activité physique adaptée -->
                 <div class="service-card">
-                    <img src="public/adaptéeG.jpeg" alt="Activité physique adaptée">
+                    <img src="public/adaptéeG.jpeg" alt="Activité physique adaptée">
                     <div class="service-content">
                         <div class="service-icon"><i class="fas fa-dumbbell"></i></div>
-
                         <h3>Activité physique adaptée</h3>
-                        <p>Programmes personnalisés pour diabète, hypertension artérielle et obésité. Exercices adaptés aux pathologies chroniques.</p>
-                        <ul class="service-details">
-                            <li>• Programmes pour diabétiques</li>
-                            <li>• Gestion de l'hypertension</li>
-                            <li>• Perte de poids encadrée</li>
-                            <li>• Suivi médical intégré</li>
-                        </ul>
+                        
+                        <div class="service-description">
+                            <div class="description-preview">
+                                <p>Programmes personnalisés pour diabète, hypertension artérielle et obésité. Exercices adaptés aux pathologies...</p>
+                            </div>
+                            
+                            <div class="description-full">
+                                <p>Programmes personnalisés pour diabète, hypertension artérielle et obésité. Exercices adaptés aux pathologies chroniques.</p>
+                                <ul class="service-details">
+                                    <li>• Programmes pour diabétiques</li>
+                                    <li>• Gestion de l'hypertension</li>
+                                    <li>• Perte de poids encadrée</li>
+                                    <li>• Suivi médical intégré</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <button class="read-more-btn" onclick="toggleDescription(this)">
+                            Voir plus <i class="fas fa-chevron-down"></i>
+                        </button>
+                        
                         <a href="rendez-vous.html" class="service-link">Prendre rendez-vous →</a>
                     </div>
                 </div>
                 
+                <!-- Service 9: Massage thérapeutique -->
                 <div class="service-card">
                     <img src="public/massageG.jpeg" alt="Massage thérapeutique">
                     <div class="service-content">
                        <div class="service-icon"><i class="fas fa-hand-holding-medical"></i></div>
                         <h3>Massage thérapeutique</h3>
-                        <p>Techniques de massage pour soulagement de la douleur et relaxation musculaire. Approche holistique du bien-être.</p>
-                        <ul class="service-details">
-                            <li>• Massage relaxant</li>
-                            <li>• Massage thérapeutique</li>
-                            <li>• Drainage lymphatique</li>
-                            <li>• Soulagement des tensions</li>
-                        </ul>
+                        
+                        <div class="service-description">
+                            <div class="description-preview">
+                                <p>Techniques de massage pour soulagement de la douleur et relaxation musculaire. Approche holistique du...</p>
+                            </div>
+                            
+                            <div class="description-full">
+                                <p>Techniques de massage pour soulagement de la douleur et relaxation musculaire. Approche holistique du bien-être.</p>
+                                <ul class="service-details">
+                                    <li>• Massage relaxant</li>
+                                    <li>• Massage thérapeutique</li>
+                                    <li>• Drainage lymphatique</li>
+                                    <li>• Soulagement des tensions</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <button class="read-more-btn" onclick="toggleDescription(this)">
+                            Voir plus <i class="fas fa-chevron-down"></i>
+                        </button>
+                        
                         <a href="rendez-vous.html" class="service-link">Prendre rendez-vous →</a>
                     </div>
                 </div>
             </div>
             
-            <!-- <div class="facility-showcase">
+            <!-- Carrousel des équipements -->
+            <div class="facility-showcase">
                 <div class="facility-content">
                     <div class="facility-text">
                         <h3>Des équipements modernes pour votre rééducation</h3>
                         <p>Notre centre dispose d'équipements de pointe et d'espaces spécialement conçus pour offrir les meilleurs soins de physiothérapie dans un environnement confortable et professionnel.</p>
                         <a href="contact.html" class="btn-primary">Visiter notre centre</a>
                     </div>
-                    <div class="facility-images">
-                        <img src="public/imgi_26_470986232_2225958974471591_3325061836061261007_n.jpg" alt="Centre Physio Phelms">
-                        <img src="public/imgi_11_482230671_18059299208293413_3543913593041663820_n.jpg" alt="Salle d'exercices">
+
+                    <!-- CARROUSEL -->
+                    <div class="facility-carousel">
+                        <button class="carousel-btn prev">❮</button>
+
+                        <div class="carousel-track">
+                            <img src="public/equipement3.JPG" alt="equipement1">
+                            <img src="public/equipement2.JPG" alt="equipement2">
+                            <img src="public/equipement6.JPG" alt="equipement3">
+                            <img src="public/equipement4.JPG" alt="equipement4">
+                            <img src="public/outil.jpeg" alt="equipement5">
+                            <img src="public/outil2.jpeg" alt="equipement6">
+                            <img src="public/outil3.jpeg" alt="equipement7">
+                            <img src="public/outil4.JPG" alt="equipement8">
+                        </div>
+
+                        <button class="carousel-btn next">❯</button>
                     </div>
                 </div>
-            </div> -->
-            <div class="facility-showcase">
-    <div class="facility-content">
-        <div class="facility-text">
-            <h3>Des équipements modernes pour votre rééducation</h3>
-            <p>Notre centre dispose d'équipements de pointe et d'espaces spécialement conçus pour offrir les meilleurs soins de physiothérapie dans un environnement confortable et professionnel.</p>
-            <a href="contact.html" class="btn-primary">Visiter notre centre</a>
-        </div>
-
-        <!-- CARROUSEL -->
-        <div class="facility-carousel">
-            <button class="carousel-btn prev">❮</button>
-
-            <div class="carousel-track">
-                <img src="public/equipement3.JPG" alt="equipement1">
-                <img src="public/equipement2.JPG" alt="equipement2">
-                <img src="public/equipement6.JPG" alt="equipement3">
-                <img src="public/equipement4.JPG" alt="equipement4">
-
             </div>
-
-            <button class="carousel-btn next">❯</button>
-        </div>
-    </div>
-</div>
 
         </div>
     </section>
@@ -277,7 +452,7 @@
                     <p>Votre partenaire santé pour une récupération optimale.</p>
                     <div class="social-links">
                         <a href="tel:+22375025959" class="social-link">📞</a>
-                        <a href="mailto:PhysioPhelms2020@gmail.com" class="social-link">📧</a>
+                        <a href="mailto:contact@physiophelms.com" class="social-link">📧</a>
                     </div>
                 </div>
                 
@@ -316,7 +491,7 @@
                         </div>
                         <div class="footer-contact-item">
                             <span class="contact-icon">📧</span>
-                            <span>PhysioPhelms2020@gmail.com</span>
+                            <span>contact@physiophelms.com</span>
                         </div>
                     </div>
                 </div>
@@ -329,29 +504,64 @@
             </div>
         </div>
     </footer>
-     <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+    
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
         <i class="fas fa-arrow-up"></i>
     </button>
 
     <script src="common.js"></script>
     <script>
+// Fonction pour toggle la description
+function toggleDescription(button) {
+    const serviceContent = button.closest('.service-content');
+    const preview = serviceContent.querySelector('.description-preview');
+    const full = serviceContent.querySelector('.description-full');
+    
+    if (full.classList.contains('expanded')) {
+        // Réduire
+        full.classList.remove('expanded');
+        preview.classList.remove('collapsed');
+        button.innerHTML = 'Voir plus <i class="fas fa-chevron-down"></i>';
+        button.classList.remove('expanded');
+    } else {
+        // Étendre
+        full.classList.add('expanded');
+        preview.classList.add('collapsed');
+        button.innerHTML = 'Voir moins <i class="fas fa-chevron-up"></i>';
+        button.classList.add('expanded');
+    }
+}
+
+// Carrousel
 const track = document.querySelector('.carousel-track');
 const nextBtn = document.querySelector('.carousel-btn.next');
 const prevBtn = document.querySelector('.carousel-btn.prev');
 
-let index = 0;
-const total = track.children.length;
+if (track && nextBtn && prevBtn) {
+    let index = 0;
+    const total = track.children.length;
 
-nextBtn.addEventListener('click', () => {
-    index = (index + 1) % total;  // Retour automatique au début
-    track.style.transform = `translateX(-${index * 100}%)`;
-});
+    nextBtn.addEventListener('click', () => {
+        index = (index + 1) % total;
+        updateCarousel();
+    });
 
-prevBtn.addEventListener('click', () => {
-    index = (index - 1 + total) % total; // Retour à la fin si index < 0
-    track.style.transform = `translateX(-${index * 100}%)`;
-});
-</script>
+    prevBtn.addEventListener('click', () => {
+        index = (index - 1 + total) % total;
+        updateCarousel();
+    });
 
+    function updateCarousel() {
+        const offset = -index * 100;
+        track.style.transform = `translateX(${offset}%)`;
+    }
+
+    // Auto-défilement toutes les 4 secondes
+    setInterval(() => {
+        index = (index + 1) % total;
+        updateCarousel();
+    }, 4000);
+}
+    </script>
 </body>
 </html>

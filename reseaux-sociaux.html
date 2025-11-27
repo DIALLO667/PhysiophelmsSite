@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suivez-nous - Physio Phelms | Réseaux Sociaux</title>
+    <meta name="description" content="Rejoignez la communauté Physio Phelms sur nos réseaux sociaux. Suivez-nous sur Facebook, Instagram et TikTok pour des conseils santé et bien-être.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="public/imgi_1_497090745_18066544382293413_4831932850810085523_n.jpg">
+    
+    <style>
+        /* Reset et base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Couleurs principales - HSL */
+            --primary: hsl(152, 69%, 31%);
+            --primary-light: hsl(152, 57%, 45%);
+            --primary-glow: hsl(152, 77%, 42%);
+            --primary-foreground: hsl(0, 0%, 100%);
+            
+            /* Couleurs de fond */
+            --background: hsl(0, 0%, 100%);
+            --background-light: hsl(152, 77%, 97%);
+            --foreground: hsl(222, 84%, 5%);
+            
+            /* Couleurs secondaires */
+            --muted: hsl(210, 40%, 96%);
+            --muted-foreground: hsl(215, 16%, 47%);
+            --border: hsl(214, 32%, 91%);
+            
+            /* Ombres */
+            --shadow-soft: 0 4px 20px hsla(152, 69%, 31%, 0.1);
+            --shadow-glow: 0 10px 30px hsla(152, 77%, 42%, 0.2);
+            
+            /* Transitions */
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--foreground);
+            background: linear-gradient(135deg, var(--background-light) 0%, var(--background) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+            border-radius: 50%;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .logo-text h1 {
+            font-size: 2rem;
+            color: var(--foreground);
+            margin: 0;
+        }
+
+        .logo-text p {
+            font-size: 0.9rem;
+            color: var(--primary);
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--foreground);
+            margin-bottom: 0.5rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.125rem;
+            color: var(--muted-foreground);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, var(--primary), var(--primary-glow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Social Cards Grid */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .social-card {
+            background: var(--background);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .social-card:nth-child(1) { animation-delay: 0.1s; }
+        .social-card:nth-child(2) { animation-delay: 0.2s; }
+        .social-card:nth-child(3) { animation-delay: 0.3s; }
+
+        .social-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-glow));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .social-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .social-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .social-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.5rem;
+            color: white;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .social-card:hover .social-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        /* Facebook */
+        .facebook .social-icon {
+            background: linear-gradient(135deg, #1877f2, #0e6bd8);
+            box-shadow: 0 8px 20px rgba(24, 119, 242, 0.3);
+        }
+
+        /* Instagram */
+        .instagram .social-icon {
+            background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            box-shadow: 0 8px 20px rgba(225, 48, 108, 0.3);
+        }
+
+        /* TikTok */
+        .tiktok .social-icon {
+            background: linear-gradient(135deg, #000000, #333333);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--foreground);
+            margin-bottom: 0.5rem;
+        }
+
+        .social-handle {
+            color: var(--muted-foreground);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .social-description {
+            color: var(--muted-foreground);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 12px 28px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-glow));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .social-link:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .social-link i {
+            font-size: 1rem;
+        }
+
+        /* Call to Action */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), var(--primary-glow));
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            box-shadow: var(--shadow-glow);
+            animation: fadeInUp 0.8s ease-out 0.4s;
+            animation-fill-mode: both;
+        }
+
+        .cta-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 12px 28px;
+            background: white;
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-back:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .page-subtitle {
+                font-size: 1rem;
+            }
+
+            .social-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .social-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .logo-text h1 {
+                font-size: 1.5rem;
+            }
+
+            .cta-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .cta-section h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem 0.5rem;
+            }
+
+            .page-title {
+                font-size: 1.75rem;
+            }
+
+            .social-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 2rem;
+            }
+
+            .social-name {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="page-header">
+            <div class="logo-section">
+                <img src="public/logop.JPG" alt="Physio Phelms Logo" class="logo-img">
+                <div class="logo-text">
+                    <h1>Physiophelms</h1>
+                    <p>Un coup de main vers une santé optimale</p>
+                </div>
+            </div>
+            <h1 class="page-title">Suivez-nous sur les <span class="highlight">Réseaux Sociaux</span></h1>
+            <p class="page-subtitle">
+                Rejoignez notre communauté pour des conseils santé, des exercices et toutes nos actualités !
+            </p>
+        </header>
+
+        <!-- Social Cards Grid -->
+        <div class="social-grid">
+            <!-- Facebook Card -->
+            <div class="social-card facebook">
+                <div class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <h3 class="social-name">Facebook</h3>
+                <p class="social-handle">@physio.phelms</p>
+                <p class="social-description">
+                    Rejoignez notre page Facebook pour suivre nos actualités, événements et conseils de santé au quotidien.
+                </p>
+                <a href="https://www.facebook.com/physio.phelms/?locale=fr_FR" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <span>Suivre sur Facebook</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Instagram Card -->
+            <div class="social-card instagram">
+                <div class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <h3 class="social-name">Instagram</h3>
+                <p class="social-handle">@physiophelms</p>
+                <p class="social-description">
+                    Découvrez nos photos, vidéos et stories pour des conseils visuels et inspirants sur votre bien-être.
+                </p>
+                <a href="https://www.instagram.com/physio.phelms/" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <span>Suivre sur Instagram</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- TikTok Card -->
+            <div class="social-card tiktok">
+                <div class="social-icon">
+                    <i class="fab fa-tiktok"></i>
+                </div>
+                <h3 class="social-name">TikTok</h3>
+                <p class="social-handle">@physiophelms</p>
+                <p class="social-description">
+                    Des vidéos courtes et dynamiques avec des exercices, astuces et démonstrations pour votre santé.
+                </p>
+                <a href="https://www.tiktok.com/@physio.phelms" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <span>Suivre sur TikTok</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <h3>Vous avez des questions ?</h3>
+            <p>N'hésitez pas à nous contacter directement ou à prendre rendez-vous pour une consultation.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="actualite.html" class="btn-back">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Retour aux actualités</span>
+                </a>
+                <a href="rendez-vous.html" class="btn-back">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>Prendre rendez-vous</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
