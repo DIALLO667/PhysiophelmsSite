@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Physio Phelms - Centre de physiothérapie à Bamako</title>
+        <title>PhysioPhelms - Centre de physiothérapie à Bamako</title>
    <meta name="description" content="Physiophelms propose des services de physiothérapie générale, pédiatrique et neurologique à Bamako. Améliorez votre santé avec nos experts.">
     <meta name="keywords" content="Physio Phelms, physiothérapie, rééducation, bien-être, santé, Bamako, Mali, services de physiothérapie, centre de physiothérapie, soins de santé, thérapie physique">
     <meta name="author" content="Physio Phelms">
@@ -76,7 +76,7 @@
                     </div>
                     <h2>Plus de 6 ans au service de votre santé</h2>
                     <p class="text-large">
-                      Physio Phelms  est un mouvement de professionnels diplômés en Physiothérapie, dont l'objectif fondamental est de défendre et de rechercher le développement intégral de la profession de Physiothérapie dans tous ses domaines, à travers la promotion et la prévention de la santé, en plus de promouvoir la formation et la rééducation des santé physique et mentale pour le développement et le renforcement des
+                      PhysioPhelms  est un mouvement de professionnels diplômés en Physiothérapie, dont l'objectif fondamental est de défendre et de rechercher le développement intégral de la profession de Physiothérapie dans tous ses domaines, à travers la promotion et la prévention de la santé, en plus de promouvoir la formation et la rééducation des santé physique et mentale pour le développement et le renforcement des
 connaissances pour les soins aux patients.
 
                     <!-- <p class="text-large">
@@ -754,7 +754,7 @@ bien-être de chacun.
 
 
 <script>
-/* ===== CARROUSEL D'ÉQUIPE — VERSION DÉFINITIVE ===== */
+/* ===== CARROUSEL D'ÉQUIPE — VERSION CORRIGÉE ===== */
 (function () {
   const AUTOPLAY_DELAY = 7000;
 
@@ -841,26 +841,48 @@ bien-être de chacun.
     startAutoplay();
   }
 
-  /* === Swipe mobile simplifié === */
+  /* === Swipe mobile amélioré - fonctionne sur toutes les slides === */
   let startX = 0;
-  const THRESHOLD = 60;
+  let isDragging = false;
+  const THRESHOLD = 50;
 
   carousel.addEventListener("touchstart", (e) => {
     startX = e.touches[0].clientX;
-  });
+    isDragging = true;
+  }, { passive: true });
+
+  carousel.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+    // On peut ajouter un effet visuel ici si nécessaire
+  }, { passive: true });
 
   carousel.addEventListener("touchend", (e) => {
+    if (!isDragging) return;
+    isDragging = false;
+    
     const endX = e.changedTouches[0].clientX;
     const diff = startX - endX;
 
-    if (diff > THRESHOLD) moveCarousel(1);
-    else if (diff < -THRESHOLD) moveCarousel(-1);
-  });
+    if (Math.abs(diff) > THRESHOLD) {
+      if (diff > 0) {
+        // Swipe vers la gauche -> slide suivante
+        moveCarousel(1);
+      } else {
+        // Swipe vers la droite -> slide précédente
+        moveCarousel(-1);
+      }
+    }
+  }, { passive: true });
 
   /* === Clavier === */
   document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowLeft") moveCarousel(-1);
     if (e.key === "ArrowRight") moveCarousel(1);
+  });
+
+  /* === Redimensionnement de fenêtre === */
+  window.addEventListener("resize", () => {
+    updateCarousel();
   });
 
   /* === Init === */
@@ -964,25 +986,21 @@ bien-être de chacun.
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+   <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="public/logop.JPG" alt="Physio Phelms Logo">
+                        <img src="public/imgi_1_497090745_18066544382293413_4831932850810085523_n.jpg" alt="Physio Phelms Logo">
                         <div class="footer-logo-text">
-                            <h3>Physio Phelms</h3>
+                            <h3>PhysioPhelms</h3>
                             <p>Un coup de main vers une santé optimale</p>
                         </div>
                     </div>
                     <p>Votre partenaire santé pour une récupération optimale.</p>
                     <div class="social-links">
-                        <a href="tel:+22375025959" class="social-link">
-                            <i class="fas fa-phone"></i>
-                        </a>
-                        <a href="/cdn-cgi/l/email-protection#acfcc4d5dfc5c3fcc4c9c0c1df9e9c9e9ceccbc1cdc5c082cfc3c1" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
+                        <a href="tel:+22375025959" class="social-link">📞</a>
+                        <a href="/cdn-cgi/l/email-protection#d686beafa5bfb986beb3babba5e4e6e4e696b1bbb7bfbaf8b5b9bb" class="social-link">📧</a>
                     </div>
                 </div>
                 
@@ -1012,16 +1030,16 @@ bien-être de chacun.
                     <h3>Contact</h3>
                     <div class="footer-contact">
                         <div class="footer-contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <span class="contact-icon">📍</span>
                             <div>Missabougou à côté de l'hôpital du Mali<br>Bamako, Mali 🇲🇱</div>
                         </div>
                         <div class="footer-contact-item">
-                            <i class="fas fa-phone"></i>
+                            <span class="contact-icon">📞</span>
                             <span>+223 75 02 59 59</span>
                         </div>
                         <div class="footer-contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3060584943595f6058555c5d430200020070575d51595c1e535f5d">[email&#160;protected]</a></span>
+                            <span class="contact-icon">📧</span>
+                            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bcecd4c5cfd5d3ecd4d9d0d1cf8e8c8e8cfcdbd1ddd5d092dfd3d1">[email&#160;protected]</a></span>
                         </div>
                     </div>
                 </div>
@@ -1037,7 +1055,7 @@ bien-être de chacun.
     <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
         <i class="fas fa-arrow-up"></i>
     </button>
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     function toggleMobileMenu() {
         const mobileNav = document.getElementById('mobileNav');
         mobileNav.classList.toggle('active');
@@ -1067,12 +1085,3 @@ bien-être de chacun.
             const mobileNav = document.getElementById('mobileNav');
             mobileNav.classList.toggle('active');
         }
-
-        function closeMobileMenu() {
-            const mobileNav = document.getElementById('mobileNav');
-            mobileNav.classList.remove('active');
-        }
-
-        // Fermer le menu mobile si on clique en dehors
-        // document.addEventListener('click', function(event) {
-        //     const mobileNav = document.getElementById('mobileNav');
