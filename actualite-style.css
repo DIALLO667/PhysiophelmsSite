@@ -703,7 +703,7 @@ p { margin-bottom: 1rem; }
 
 /* Contrôles du carrousel */
 .team-carousel-container {
-    position: relative; /* IMPORTANT pour position absolute des flèches sur mobile */
+    position: relative;
 }
 
 .carousel-controls {
@@ -752,97 +752,61 @@ p { margin-bottom: 1rem; }
     font-size: 1.15rem;
 }
 
-/* Rendre accessible (focus) */
-#prevBtn:focus, #nextBtn:focus {
-    outline: 3px solid rgba(16,185,129,0.18);
-    outline-offset: 3px;
-}
-
-/* MOBILE: Flèches sur les côtés + hauteurs réduites */
+/* MOBILE: Flèches entre l'image et le texte */
 @media (max-width: 768px) {
-    /* Flèches en position absolute sur les côtés */
-    #prevBtn, #nextBtn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 48px;
-        height: 48px;
+    .team-slide {
+        position: relative; /* Important pour positionner les flèches */
     }
     
-    #prevBtn { left: 5px; }
-    #nextBtn { right: 5px; }
+    /* Contrôles invisibles sur mobile (on utilise les flèches positionnées) */
+    .carousel-controls {
+        position: absolute;
+        width: 100%;
+        top: 320px; /* Juste après l'image (hauteur image = 320px) */
+        left: 0;
+        right: 0;
+        margin-top: 0;
+        padding: 0.75rem 0;
+        justify-content: space-between;
+        pointer-events: none; /* Les clics passent à travers */
+    }
+    
+    #prevBtn, #nextBtn {
+        pointer-events: all; /* Mais les boutons restent cliquables */
+        position: relative;
+        transform: none;
+        width: 48px;
+        height: 48px;
+        margin: 0 10px;
+    }
     
     #prevBtn:hover,
     #nextBtn:hover {
-        transform: translateY(-50%) scale(1.05);
+        transform: scale(1.05);
     }
     
-    /* Carrousel plus compact sur mobile */
-    .team-slide {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 0 5px;
-    }
-
-    .member-photo {
-        width: 100%;
-    }
-
-    .member-photo-img {
-        height: 340px;
-    }
-
-    .member-info {
-        padding: 0.75rem;
-    }
-
-    .member-name {
-        font-size: 1.65rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .member-title {
-        font-size: 1.1rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .member-experience {
-        font-size: 0.85rem;
-        padding: 0.4rem 0.9rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .member-description {
-        font-size: 0.9rem;
-        line-height: 1.45;
-    }
-
-    .team-photo-placeholder {
-        height: 320px;
+    /* Masquer les dots sur mobile */
+    .carousel-dots {
+        display: none;
     }
 }
 
 @media (max-width: 480px) {
+    .carousel-controls {
+        top: 280px; /* Ajusté pour la hauteur d'image mobile */
+    }
+    
     #prevBtn, #nextBtn {
         width: 44px;
         height: 44px;
+        margin: 0 8px;
     }
-    
-    .member-name {
-        font-size: 1.5rem;
-    }
+}
 
-    .member-title {
-        font-size: 1rem;
-    }
-
-    .team-photo-placeholder {
-        height: 280px;
-    }
-
-    .member-photo-img {
-        height: 320px;
-    }
+/* Rendre accessible (focus) */
+#prevBtn:focus, #nextBtn:focus {
+    outline: 3px solid rgba(16,185,129,0.18);
+    outline-offset: 3px;
 }
 
 /* Optionnel : cacher les flèches si tu veux (ex: small screens) 
