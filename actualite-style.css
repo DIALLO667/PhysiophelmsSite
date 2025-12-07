@@ -256,6 +256,13 @@ p { margin-bottom: 1rem; }
 
 .equipe-section {
     background: var(--background);
+    padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+    .equipe-section {
+        padding: 50px 0;
+    }
 }
 
 .video-section {
@@ -302,7 +309,18 @@ p { margin-bottom: 1rem; }
 /* Section Header */
 .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.75rem;
+        margin-bottom: 0;
+    }
 }
 
 .subtitle {
@@ -574,6 +592,12 @@ p { margin-bottom: 1rem; }
     width: 100%;
 }
 
+@media (max-width: 768px) {
+    .team-carousel-container {
+        margin-bottom: 1.5rem;
+    }
+}
+
 .team-carousel {
     display: flex;
     flex-wrap: nowrap;
@@ -602,7 +626,7 @@ p { margin-bottom: 1rem; }
 
 .team-photo-placeholder {
     width: 100%;
-    height: 420px;
+    height: 500px;
     background: linear-gradient(135deg, hsl(152, 77%, 97%), hsl(152, 57%, 95%));
     background-image: url('public/equipe.jpeg');
     background-size: cover;
@@ -621,7 +645,7 @@ p { margin-bottom: 1rem; }
 
 .member-photo-img {
     width: 100%;
-    height: 420px;
+    height: 500px;
     background: linear-gradient(135deg, hsl(152, 77%, 97%), hsl(152, 57%, 95%));
     border-radius: 16px;
     box-shadow: var(--shadow-soft);
@@ -679,7 +703,7 @@ p { margin-bottom: 1rem; }
 
 /* Contrôles du carrousel */
 .team-carousel-container {
-    position: relative; /* IMPORTANT pour position absolute des flèches */
+    position: relative; /* IMPORTANT pour position absolute des flèches sur mobile */
 }
 
 .carousel-controls {
@@ -687,20 +711,20 @@ p { margin-bottom: 1rem; }
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-    margin-top: 2rem;
-     position: relative;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    position: relative;
     z-index: 20;
 }
 
 
-/* Position absolute des boutons (gauche / droite), centrés verticalement */
+/* Position relative des boutons - juste en dessous du carrousel sur PC */
 #prevBtn,
 #nextBtn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative;
+    transform: none;
     z-index: 30;
-    background: var(--primary);
+    background: rgba(16, 185, 129, 0.9);
     color: white;
     border: none;
     width: 56px;
@@ -709,22 +733,19 @@ p { margin-bottom: 1rem; }
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: var(--shadow-soft);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     transition: var(--transition);
     cursor: pointer;
+    backdrop-filter: blur(4px);
 }
 
 /* Conserves les styles existants (hover, taille, etc.) */
 #prevBtn:hover,
 #nextBtn:hover {
     background: var(--primary-glow);
-    transform: translateY(-50%) scale(1.06);
-    box-shadow: var(--shadow-glow);
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
 }
-
-/* Décalage horizontal */
-#prevBtn { left: 12px; }   /* à gauche */
-#nextBtn { right: 12px; }  /* à droite */
 
 /* Icoms */
 #prevBtn i, #nextBtn i {
@@ -737,20 +758,90 @@ p { margin-bottom: 1rem; }
     outline-offset: 3px;
 }
 
-/* Responsive : réduire la taille sur petit écran et améliorer le positionnement */
+/* MOBILE: Flèches sur les côtés + hauteurs réduites */
 @media (max-width: 768px) {
+    /* Flèches en position absolute sur les côtés */
     #prevBtn, #nextBtn {
-        width: 44px;
-        height: 44px;
+        position: absolute;
         top: 50%;
         transform: translateY(-50%);
+        width: 48px;
+        height: 48px;
     }
+    
     #prevBtn { left: 5px; }
     #nextBtn { right: 5px; }
     
     #prevBtn:hover,
     #nextBtn:hover {
-        transform: translateY(-50%) scale(1.06);
+        transform: translateY(-50%) scale(1.05);
+    }
+    
+    /* Carrousel plus compact sur mobile */
+    .team-slide {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 5px;
+    }
+
+    .member-photo {
+        width: 100%;
+    }
+
+    .member-photo-img {
+        height: 340px;
+    }
+
+    .member-info {
+        padding: 0.75rem;
+    }
+
+    .member-name {
+        font-size: 1.65rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .member-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .member-experience {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.9rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .member-description {
+        font-size: 0.9rem;
+        line-height: 1.45;
+    }
+
+    .team-photo-placeholder {
+        height: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    #prevBtn, #nextBtn {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .member-name {
+        font-size: 1.5rem;
+    }
+
+    .member-title {
+        font-size: 1rem;
+    }
+
+    .team-photo-placeholder {
+        height: 280px;
+    }
+
+    .member-photo-img {
+        height: 320px;
     }
 }
 
@@ -917,32 +1008,36 @@ p { margin-bottom: 1rem; }
     }
 
     .member-photo-img {
-        height: 320px;
+        height: 340px;
     }
 
     .member-info {
-        padding: 1rem;
+        padding: 0.75rem;
     }
 
     .member-name {
-        font-size: 2rem;
+        font-size: 1.65rem;
+        margin-bottom: 0.5rem;
     }
 
     .member-title {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
     }
 
     .member-experience {
-        font-size: 0.875rem;
-        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        padding: 0.4rem 0.9rem;
+        margin-bottom: 0.75rem;
     }
 
     .member-description {
-        font-size: 1rem;
+        font-size: 0.9rem;
+        line-height: 1.45;
     }
 
     .team-photo-placeholder {
-        height: 280px;
+        height: 320px;
     }
 
     .carousel-button {
@@ -952,6 +1047,16 @@ p { margin-bottom: 1rem; }
 
     .carousel-button i {
         font-size: 1rem;
+    }
+    
+    /* Masquer les dots sur mobile pour gagner de l'espace */
+    .carousel-dots {
+        display: none;
+    }
+    
+    /* Réduire l'espace des contrôles */
+    .carousel-controls {
+        margin-top: 0.5rem;
     }
 
     /* Témoignages mobile */
@@ -966,19 +1071,19 @@ p { margin-bottom: 1rem; }
 
 @media (max-width: 480px) {
     .member-name {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
 
     .member-title {
-        font-size: 1.125rem;
+        font-size: 1rem;
     }
 
     .team-photo-placeholder {
-        height: 240px;
+        height: 300px;
     }
 
     .member-photo-img {
-        height: 280px;
+        height: 350px;
     }
 
     .carousel-controls {

@@ -193,7 +193,6 @@ connaissances pour les soins aux patients.
                 <span>Notre Équipe</span>
             </div>
             <h2>Des professionnels dévoués à votre service</h2>
-            <p class="subtitle">Une équipe de professionnels passionnés, unis par la même mission : vous accompagner vers une santé optimale.</p>
         </div>
 
         <!-- Carrousel d'équipe -->
@@ -210,26 +209,7 @@ connaissances pour les soins aux patients.
                 </div>
 
                      <!-- Slide 2: Membre 1 -->
-                <div class="team-slide">
-                    <div class="member-photo">
-                        <div class="member-photo-img">
-                            <img src="public/moustaphe.JPG" alt="Fatoumata Sidibé">
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Moustapha Coulibaly</h3>
-                        <p class="member-title">Experte en Physiothérapie Neurologique</p>
-                        <div class="member-experience">
-                            <i class="fas fa-award"></i>
-                            <span>+7 ans d'expérience</span>
-                        </div>
-                        <p class="member-description">
-                            Spécialisée dans la rééducation neurologique, Fatoumata accompagne les patients 
-                            souffrant d'AVC, de traumatismes crâniens ou de maladies neurodégénératives. 
-                            Sa patience et son expertise offrent un espoir de récupération à ses patients.
-                        </p>
-                    </div>
-                </div>
+              
      <!-- Slide 7 : Membre 4 -->
                 <div class="team-slide">
                     <div class="member-photo">
@@ -841,37 +821,78 @@ bien-être de chacun.
     startAutoplay();
   }
 
-  /* === Swipe mobile amélioré - fonctionne sur toutes les slides === */
-  let startX = 0;
-  let isDragging = false;
-  const THRESHOLD = 50;
+  /* === Swipe mobile ULTRA-CORRIGÉ - désactive l'autoplay pendant le swipe === */
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchEndX = 0;
+  let touchEndY = 0;
+  let isSwiping = false;
+  let touchStartTime = 0;
+  const SWIPE_THRESHOLD = 30; // Seuil plus bas pour plus de réactivité
+  const MAX_SWIPE_TIME = 500; // Temps max pour un swipe (ms)
 
   carousel.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].clientX;
-    isDragging = true;
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+    touchStartTime = Date.now();
+    isSwiping = false;
+    
+    // IMPORTANT: Arrêter l'autoplay quand on touche
+    stopAutoplay();
   }, { passive: true });
 
   carousel.addEventListener("touchmove", (e) => {
-    if (!isDragging) return;
-    // On peut ajouter un effet visuel ici si nécessaire
-  }, { passive: true });
+    if (!touchStartX || !touchStartY) return;
+    
+    const touchCurrentX = e.touches[0].clientX;
+    const touchCurrentY = e.touches[0].clientY;
+    
+    const diffX = Math.abs(touchStartX - touchCurrentX);
+    const diffY = Math.abs(touchStartY - touchCurrentY);
+    
+    // Si le mouvement est plus horizontal que vertical
+    if (diffX > diffY && diffX > 5) {
+      isSwiping = true;
+      // Empêcher le scroll pendant le swipe horizontal
+      if (e.cancelable) {
+        e.preventDefault();
+      }
+    }
+  }, { passive: false }); // passive: false pour permettre preventDefault
 
   carousel.addEventListener("touchend", (e) => {
-    if (!isDragging) return;
-    isDragging = false;
+    touchEndX = e.changedTouches[0].clientX;
+    touchEndY = e.changedTouches[0].clientY;
     
-    const endX = e.changedTouches[0].clientX;
-    const diff = startX - endX;
-
-    if (Math.abs(diff) > THRESHOLD) {
-      if (diff > 0) {
+    const swipeTime = Date.now() - touchStartTime;
+    const diffX = touchStartX - touchEndX;
+    const diffY = touchStartY - touchEndY;
+    
+    // Vérifier que c'est un swipe rapide et horizontal
+    if (isSwiping && 
+        swipeTime < MAX_SWIPE_TIME && 
+        Math.abs(diffX) > Math.abs(diffY) && 
+        Math.abs(diffX) > SWIPE_THRESHOLD) {
+      
+      if (diffX > 0) {
         // Swipe vers la gauche -> slide suivante
         moveCarousel(1);
       } else {
         // Swipe vers la droite -> slide précédente
         moveCarousel(-1);
       }
+    } else {
+      // Si pas de swipe, relancer l'autoplay après un délai
+      pauseAutoplayTemporarily();
     }
+    
+    // Reset
+    touchStartX = 0;
+    touchStartY = 0;
+    touchEndX = 0;
+    touchEndY = 0;
+    isSwiping = false;
+    touchStartTime = 0;
   }, { passive: true });
 
   /* === Clavier === */
@@ -1084,4 +1105,9 @@ bien-être de chacun.
         function toggleMobileMenu() {
             const mobileNav = document.getElementById('mobileNav');
             mobileNav.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.remove('active');
         }
