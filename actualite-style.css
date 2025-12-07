@@ -752,54 +752,48 @@ p { margin-bottom: 1rem; }
     font-size: 1.15rem;
 }
 
-/* MOBILE: Flèches entre l'image et le texte */
+/* MOBILE: Flèches sur les côtés du carrousel */
 @media (max-width: 768px) {
-    .team-slide {
-        position: relative; /* Important pour positionner les flèches */
-    }
-    
-    /* Contrôles invisibles sur mobile (on utilise les flèches positionnées) */
-    .carousel-controls {
-        position: absolute;
-        width: 100%;
-        top: 320px; /* Juste après l'image (hauteur image = 320px) */
-        left: 0;
-        right: 0;
-        margin-top: 0;
-        padding: 0.75rem 0;
-        justify-content: space-between;
-        pointer-events: none; /* Les clics passent à travers */
+    .team-carousel-container {
+        position: relative;
     }
     
     #prevBtn, #nextBtn {
-        pointer-events: all; /* Mais les boutons restent cliquables */
-        position: relative;
-        transform: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
         width: 48px;
         height: 48px;
-        margin: 0 10px;
+    }
+    
+    #prevBtn { 
+        left: 5px;
+    }
+    
+    #nextBtn { 
+        right: 5px;
     }
     
     #prevBtn:hover,
     #nextBtn:hover {
-        transform: scale(1.05);
+        transform: translateY(-50%) scale(1.05);
     }
     
     /* Masquer les dots sur mobile */
     .carousel-dots {
         display: none;
     }
+    
+    /* Réduire l'espace des contrôles */
+    .carousel-controls {
+        margin-top: 0.5rem;
+    }
 }
 
 @media (max-width: 480px) {
-    .carousel-controls {
-        top: 280px; /* Ajusté pour la hauteur d'image mobile */
-    }
-    
     #prevBtn, #nextBtn {
         width: 44px;
         height: 44px;
-        margin: 0 8px;
     }
 }
 
