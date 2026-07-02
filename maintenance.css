@@ -1,0 +1,58 @@
+/* === MODE MAINTENANCE === */
+/* Ce fichier n'est utilisé que pendant la maintenance du site. */
+
+html,
+body {
+    overflow: hidden !important;
+    height: 100%;
+}
+
+.maintenance-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(6, 20, 14, 0.92);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.maintenance-box {
+    background: #fff;
+    border-radius: 20px;
+    padding: 48px 36px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+.maintenance-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 24px;
+    color: #10b981;
+    animation: maintenance-spin 2.5s linear infinite;
+}
+
+@keyframes maintenance-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.maintenance-box h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 12px;
+}
+
+.maintenance-box p {
+    font-size: 1rem;
+    color: #6b7280;
+    line-height: 1.5;
+    margin: 0;
+}
